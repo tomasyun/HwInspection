@@ -13,20 +13,11 @@ class AppPrefsHelper @Inject constructor(
 ) :
     PrefsHelper {
     companion object {
-        private val PREF_KEY_CURRENT_USER_NAME = "PREF_KEY_CURRENT_USER_NAME"
         private val PREF_KEY_IS_LOGIN = "PREF_KEY_IS_LOGIN"
     }
 
     private val mPrefs: SharedPreferences =
         app.getSharedPreferences(prefFileName, Context.MODE_PRIVATE)
-
-    override fun getCurrentUserName(): String = mPrefs.getString(PREF_KEY_CURRENT_USER_NAME, "ABC")
-
-    override fun setCurrentUserName(userName: String?) = mPrefs.edit {
-        putString(
-            PREF_KEY_CURRENT_USER_NAME, userName
-        )
-    }
 
     override fun getIsLogin(): Boolean = mPrefs.getBoolean(PREF_KEY_IS_LOGIN, false)
 

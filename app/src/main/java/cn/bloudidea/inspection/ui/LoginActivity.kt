@@ -21,17 +21,17 @@ class LoginActivity : BaseActivity() {
         login.setOnClickListener {
             when {
                 etAccount?.text.isNullOrEmpty() -> {
-//                    toast("账号不能为空")
+                    //toast("账号不能为空")
                     ToastUtils.Instance()?.showToast(this, "密码不能为空")
                 }
                 etPassword?.text.isNullOrEmpty() -> {
                     ToastUtils.Instance()?.showToast(this, "密码不能为空")
                 }
                 else -> {
-                    //                val sp=this.getSharedPreferences("inspect",0)
-                    //                sp.edit().putBoolean("login",true).apply()
+                    // val sp=this.getSharedPreferences("inspect",0)
+                    // sp.edit().putBoolean("login",true).apply()
 
-//                    logined = true
+                    //logined = true
                     vm.isLogin()
                     startActivity(Intent(this, MainActivity::class.java))
                     this.finish()
