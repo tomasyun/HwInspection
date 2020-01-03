@@ -13,7 +13,7 @@ class AppPrefsHelper @Inject constructor(
 ) :
     PrefsHelper {
     companion object {
-        private val PREF_KEY_IS_LOGIN = "PREF_KEY_IS_LOGIN"
+        private const val PREF_KEY_IS_LOGIN = "PREF_KEY_IS_LOGIN"
     }
 
     private val mPrefs: SharedPreferences =
