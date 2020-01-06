@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".ui.manager.contract.ContractManagerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbContractManager"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/MenuTextStyle">
+
+        <ImageView
+            android:id="@+id/ivContractManagerBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:paddingRight="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvContractManagerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/bg_default"
+            android:textSize="18sp"
+            tools:text="合同管理" />
+
+        <ImageView
+            android:id="@+id/ivShowMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_more_horiz_white_24dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+</LinearLayout>

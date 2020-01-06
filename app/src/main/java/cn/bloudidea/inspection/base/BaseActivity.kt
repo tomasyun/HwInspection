@@ -1,5 +1,6 @@
 package cn.bloudidea.inspection.base
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import cn.bloudidea.inspection.di.component.buildAndInject
 import com.evernote.android.state.StateSaver
 import com.uber.autodispose.*
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import io.reactivex.*
 import io.reactivex.annotations.CheckReturnValue
 import io.reactivex.parallel.ParallelFlowable
@@ -68,4 +70,9 @@ abstract class BaseActivity : AppCompatActivity() {
     @CheckReturnValue
     fun <T> ParallelFlowable<T>.autoDisposable(): ParallelFlowableSubscribeProxy<T> =
         this.`as`(AutoDispose.autoDisposable(scopeProvider))
+
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase!!))
+    }
 }

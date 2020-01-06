@@ -17,4 +17,5 @@ class MainActivity : BaseActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         NavigationUI.setupWithNavController(navigation_view, navHostFragment.navController)
     }
+
 }

@@ -24,11 +24,11 @@
             android:name=".ui.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <activity
@@ -90,6 +90,17 @@
             android:name=".ui.SelectActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.manager.contract.ContractManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"

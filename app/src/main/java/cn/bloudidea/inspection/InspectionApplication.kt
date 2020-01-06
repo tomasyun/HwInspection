@@ -9,6 +9,9 @@ import cn.bloudidea.inspection.di.module.AppModule
 import cn.bloudidea.inspection.di.module.FlipperModule
 import com.facebook.flipper.core.FlipperClient
 import com.google.gson.GsonBuilder
+import io.github.inflationx.calligraphy3.CalligraphyConfig
+import io.github.inflationx.calligraphy3.CalligraphyInterceptor
+import io.github.inflationx.viewpump.ViewPump
 import okhttp3.OkHttpClient
 import timber.log.Timber
 import javax.inject.Inject
@@ -30,6 +33,16 @@ open class InspectionApplication : Application() {
             Timber.plant(Timber.DebugTree())
         }
         flipperClient.start()
+
+        ViewPump.init(
+            ViewPump.builder().addInterceptor(
+                CalligraphyInterceptor(
+                    CalligraphyConfig.Builder().setDefaultFontPath(
+                        "fonts/gtw.ttf"
+                    ).setFontAttrId(R.attr.fontPath).setFontMapper { font -> font }.build()
+                )
+            ).build()
+        )
     }
 
     protected open fun createComponent(): AppComponent {

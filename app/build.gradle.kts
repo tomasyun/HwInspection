@@ -81,13 +81,13 @@ dependencies {
     implementation("com.uber.autodispose:autodispose-android-archcomponents:1.4.0")
 
     // Dependency injection
-    implementation("com.google.dagger:dagger:2.24")
-    kapt("com.google.dagger:dagger-compiler:2.24")
+    implementation("com.google.dagger:dagger:2.25.2")
+    kapt("com.google.dagger:dagger-compiler:2.25.2")
 
     //room
-    implementation("androidx.room:room-runtime:2.2.0-rc01")
-    kapt("androidx.room:room-compiler:2.2.0-rc01")
-    implementation("androidx.room:room-rxjava2:2.2.0-rc01")
+    implementation("androidx.room:room-runtime:2.2.3")
+    kapt("androidx.room:room-compiler:2.2.3")
+    implementation("androidx.room:room-rxjava2:2.2.3")
 
     // Others
     implementation("com.squareup.picasso:picasso:2.71828")
@@ -101,7 +101,10 @@ dependencies {
     implementation("com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar")
 
     implementation("com.zhihu.android:matisse:0.5.3-beta3")
-    implementation("com.github.bumptech.glide:glide:4.9.0")
+    implementation("com.github.bumptech.glide:glide:4.10.0")
+
+    implementation("io.github.inflationx:calligraphy3:3.1.1")
+    implementation("io.github.inflationx:viewpump:2.0.3")
 
     // For debugging
     debugImplementation("com.facebook.flipper:flipper:0.23.2")
