@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Insert title here</title>
+    <style>
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align: left;
+    valign: left;
+}
+
+
+    </style>
+    <!-- 引入 ECharts 文件 -->
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+<div id="main"
+     style="height: 100%; width: 100%; border: 0px; text-align: left; align: left; valign: left;"></div>
+<script type="text/javascript">
+        var xName = [ '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月',
+                '十月', '十一月', '十二月' ]; //x轴数据显示数据
+        var yname = [ 100.5, 123, 86.5, 58.9, 90, 92.4, 88.7, 69.2, 98, 75,
+                97.8, 109 ]; // 已关控
+        var wname = [ 50, 48, 55, 99, 100, 98.9, 87.3, 55, 83, 59, 68, 88 ]; //未管控
+        var lengend = [ '话费', '流量' ];
+        var sum = [ 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 ];
+        var barwidth = 60;
+        function createBarLineChart() {
+            var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+                legend : { // 图例的样式
+                    show : true,
+                    orient : 'horizontal',
+                    itemGap : 50, // 图例之间的距离
+                    itemHeight : 10, // 图例的高度
+                    data : [ {
+                        name : lengend[0],
+                        icon : "rectangle"
+                    }, {
+                        name : lengend[1],
+                        icon : "rectangle"
+                    } ],
+                    textStyle : {
+                        color : 'black',
+                        fontSize : 16,
+                    },
+                },
+                grid : { //设置图标在div中的位置
+                    left : '2%',
+                    right : '2%',
+                    bottom : '3%',
+                    show : false,
+                    containLabel : true
+                // 是否包含标题
+                },
+                tooltip : {
+                    show : true,
+                },
+                xAxis : [ {
+                    type : 'category',
+                    data : xName,
+                    boundaryGap : true, // 值是在中间还在在原点
+                    axisLine : {
+                        lineStyle : {
+                            color : 'black'
+                        },
+                        show : true
+                    }, //x轴 的颜色
+                    axisTick : {
+                        show : false
+                    }, // 是否加上x轴的小柱柱
+                    axisLabel : {
+                        interval : 0,
+                        rotate : 0, //字体倾斜
+                        textStyle : {
+                            color : 'black', // x轴的颜色
+                            fontSize : '14'
+                        }
+                    }
+                } ],
+                yAxis : [ {
+                    type : 'value'
+                } ],
+                series : [ {
+                    name : lengend[0],
+                    type : 'bar', // line表示线图  bar表示柱图
+                    stack : '管控',
+                    barWidth : barwidth,
+                    data : yname,
+                    label : { // 设置数据是否显示
+                        normal : {
+                            show : true,
+                            position : 'inside',
+                            textStyle : {
+                                color : "white"
+                            }
+                        }
+                    }
+                }, {
+                    name : lengend[1],
+                    type : 'bar',
+                    stack : '管控',
+                    barWidth : barwidth,
+                    data : wname,
+                    label : {
+                        normal : {
+                            show : true,
+                            position : 'top',
+                            textStyle : {
+                                color : "black"
+                            }
+                        }
+                    },
+                }, ],
+            };
+            myChart.setOption(option);
+        }
+
+</script>
+</body>
+</html>

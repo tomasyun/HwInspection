@@ -39,6 +39,8 @@ android {
             "APPLICATION_ID" to applicationId,
             "SCHEME" to scheme
         )
+
+        ndk { abiFilters("armeabi", "armeabi-v7a", "x86", "mips") }
     }
     buildTypes {
         getByName("release") {
@@ -105,6 +107,10 @@ dependencies {
 
     implementation("io.github.inflationx:calligraphy3:3.1.1")
     implementation("io.github.inflationx:viewpump:2.0.3")
+    api("com.tencent.tbs.tbssdk:sdk:43697")
+
+    implementation("com.github.abel533:ECharts:3.0.0.2")
+    implementation("com.google.code.gson:gson:2.8.6")
 
     // For debugging
     debugImplementation("com.facebook.flipper:flipper:0.23.2")

@@ -9,6 +9,7 @@ import cn.bloudidea.inspection.di.module.AppModule
 import cn.bloudidea.inspection.di.module.FlipperModule
 import com.facebook.flipper.core.FlipperClient
 import com.google.gson.GsonBuilder
+import com.tencent.smtt.sdk.QbSdk
 import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
@@ -43,6 +44,18 @@ open class InspectionApplication : Application() {
                 )
             ).build()
         )
+
+        val cb: QbSdk.PreInitCallback = object : QbSdk.PreInitCallback {
+            override fun onCoreInitFinished() {
+
+            }
+
+            override fun onViewInitFinished(p: Boolean) {
+                Timber.d("onViewInitFinished is %s", p);
+            }
+        }
+
+        QbSdk.initX5Environment(applicationContext, cb);
     }
 
     protected open fun createComponent(): AppComponent {

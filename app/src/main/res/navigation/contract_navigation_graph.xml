@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contract_navigation_graph"
+    app:startDestination="@id/contractBoard">
+
+    <fragment
+        android:id="@+id/contractBoard"
+        android:name="cn.bloudidea.inspection.contract.board.ContractBoardFragment"
+        android:label="fragment_contract_board"
+        tools:layout="@layout/fragment_contract_board" />
+
+    <fragment
+        android:id="@+id/bidSection"
+        android:name="cn.bloudidea.inspection.contract.bid.BidSectionFragment"
+        android:label="fragment_bid_section"
+        tools:layout="@layout/fragment_bid_section" />
+
+    <fragment
+        android:id="@+id/laborerBill"
+        android:name="cn.bloudidea.inspection.contract.laborer.LaborerBillFragment"
+        android:label="fragment_laborer_bill"
+        tools:layout="@layout/fragment_laborer_bill" />
+
+    <fragment
+        android:id="@+id/materialBill"
+        android:name="cn.bloudidea.inspection.contract.material.MaterialBillFragment"
+        android:label="fragment_material_bill"
+        tools:layout="@layout/fragment_material_bill" />
+
+    <fragment
+        android:id="@+id/periodManage"
+        android:name="cn.bloudidea.inspection.contract.period.PeriodManageFragment"
+        android:label="fragment_period_manage"
+        tools:layout="@layout/fragment_period_manage" />
+
+    <fragment
+        android:id="@+id/planProportionManage"
+        android:name="cn.bloudidea.inspection.contract.proportion.PlanProportionManageFragment"
+        android:label="fragment_plan_proportion_manage"
+        tools:layout="@layout/fragment_plan_proportion_manage" />
+
+    <fragment
+        android:id="@+id/priceBill"
+        android:name="cn.bloudidea.inspection.contract.price.PriceBillFragment"
+        android:label="fragment_price_bill"
+        tools:layout="@layout/fragment_price_bill" />
+
+    <fragment
+        android:id="@+id/provisionalGoldManage"
+        android:name="cn.bloudidea.inspection.contract.provisional.ProvisionalGoldManageFragment"
+        android:label="fragment_provision_gold_manage"
+        tools:layout="@layout/fragment_provision_gold_manage" />
+
+</navigation>
