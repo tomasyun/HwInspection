@@ -93,7 +93,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="cn.bloudidea.inspection.contract.ContractManagerActivity"
+            android:name="cn.bloudidea.inspection.ui.contract.ContractManagerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >
             <intent-filter>

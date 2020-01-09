@@ -112,6 +112,8 @@ dependencies {
     implementation("com.github.abel533:ECharts:3.0.0.2")
     implementation("com.google.code.gson:gson:2.8.6")
 
+    implementation("com.contrarywind:Android-PickerView:4.1.9")
+
     // For debugging
     debugImplementation("com.facebook.flipper:flipper:0.23.2")
     debugImplementation("com.facebook.soloader:soloader:0.8.0")

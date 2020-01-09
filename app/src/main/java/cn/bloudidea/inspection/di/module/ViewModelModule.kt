@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import cn.bloudidea.inspection.di.DaggerViewModelFactory
 import cn.bloudidea.inspection.di.ViewModelKey
 import cn.bloudidea.inspection.ui.*
+import cn.bloudidea.inspection.ui.contract.bid.BidSectionViewModel
 import cn.bloudidea.inspection.ui.home.HomeViewModel
 import cn.bloudidea.inspection.ui.message.HasReadViewModel
 import cn.bloudidea.inspection.ui.message.MessageViewModel
@@ -85,4 +86,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SplashViewModel::class)
     abstract fun bindSplashViewModel(viewModel: SplashViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BidSectionViewModel::class)
+    abstract fun bindBidSectionViewModel(viewModel: BidSectionViewModel): ViewModel
 }

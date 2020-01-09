@@ -1,4 +1,4 @@
-package cn.bloudidea.inspection.contract.proportion
+package cn.bloudidea.inspection.ui.contract.provisional
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
 
-class PlanProportionManageFragment : BaseFragment() {
+class ProvisionalGoldManageFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_plan_proportion_manage, container, false)
+        return inflater.inflate(R.layout.fragment_provision_gold_manage, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

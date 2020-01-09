@@ -4,21 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".contract.ContractManagerActivity">
+    tools:context=".ui.contract.ContractManagerActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="合同看板"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+    <cn.bloudidea.inspection.util.X5WebView
+        android:id="@+id/boardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
-    <!--    <cn.bloudidea.inspection.util.X5WebView-->
-    <!--        android:id="@+id/chart"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:layout_gravity="center">-->
-
-    <!--    </cn.bloudidea.inspection.util.X5WebView>-->
+    </cn.bloudidea.inspection.util.X5WebView>
 </LinearLayout>

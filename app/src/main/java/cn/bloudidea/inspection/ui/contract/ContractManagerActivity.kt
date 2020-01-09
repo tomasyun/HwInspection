@@ -1,4 +1,4 @@
-package cn.bloudidea.inspection.contract
+package cn.bloudidea.inspection.ui.contract
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -73,6 +73,7 @@ class ContractManagerActivity : BaseActivity() {
             when (p.itemId) {
                 R.id.contractBoard -> tvContractManageTitle.text = "合同看板"
                 R.id.bidSection -> tvContractManageTitle.text = "标段概况"
+                R.id.quantityBill -> tvContractManageTitle.text = "工程量清单"
                 R.id.materialBill -> tvContractManageTitle.text = "材料清单"
                 R.id.laborerBill -> tvContractManageTitle.text = "计日工清单"
                 R.id.priceBill -> tvContractManageTitle.text = "价格清单"
@@ -82,46 +83,6 @@ class ContractManagerActivity : BaseActivity() {
             }
             handled
         }
-//        chart.loadUrl("file:///android_asset/test02.html")
-//        val client: WebViewClient =
-//            object : WebViewClient() {
-//                override fun shouldOverrideUrlLoading(
-//                    view: WebView,
-//                    url: String
-//                ): Boolean {
-//                    view.loadUrl(url)
-//                    return true
-//                }
-//
-//                override fun onPageFinished(
-//                    webView: WebView,
-//                    s: String
-//                ) {
-//                    super.onPageFinished(webView, s)
-////                  refreshLineChart()
-//                    webView.loadUrl("javascript:createChart();")
-//                }
-//            }
-//        chart.webViewClient = client
-//    fun refreshLineChart() {
-//        val x: Array<String?> = arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-//        val y: Array<Int?> = arrayOf(820, 932, 901, 934, 1290, 1330, 1320)
-//        refreshEchartsWithOption(EchartOption.getLineChartOptions(x, y));
-//    }
-
-        /**刷新图表
-         * java调用js的loadEcharts方法刷新echart
-         * 不能在第一时间就用此方法来显示图表，因为第一时间html的标签还未加载完成，不能获取到标签值
-         * @param option
-         */
-//    private fun refreshEchartsWithOption(option: GsonOption?) {
-//        if (option == null) {
-//            return
-//        }
-//        val optionString = option.toString()
-//        val call = "javascript:loadEcharts('$optionString')"
-//        chart.loadUrl(call)
-//    }
     }
 
     private fun matchDestination(destination: NavDestination, itemId: Int): Boolean {

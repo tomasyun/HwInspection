@@ -3,6 +3,7 @@ package cn.bloudidea.inspection.di.module
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.bloudidea.inspection.di.FragmentScope
+import cn.bloudidea.inspection.ui.contract.bid.BidAdapter
 import cn.bloudidea.inspection.ui.message.MessageListAdapter
 import cn.bloudidea.inspection.ui.message.MsgViewPagerAdapter
 import dagger.Module
@@ -25,4 +26,7 @@ class FragmentModule(private val fragment: Fragment) {
 
     @Provides
     fun provideLinearLayoutManager(): LinearLayoutManager = LinearLayoutManager(fragment.context)
+
+    @Provides
+    fun provideBidAdapter(): BidAdapter = BidAdapter(fragment.activity!!, ArrayList())
 }

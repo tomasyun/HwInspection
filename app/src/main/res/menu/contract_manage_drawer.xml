@@ -8,6 +8,11 @@
         android:id="@+id/bidSection"
         android:checked="true"
         android:title="标段概况" />
+
+    <item
+        android:id="@+id/quantityBill"
+        android:checked="true"
+        android:title="工程量清单" />
     <item
         android:id="@+id/materialBill"
         android:checked="true"

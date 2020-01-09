@@ -1,4 +1,4 @@
-package cn.bloudidea.inspection.contract.bid
+package cn.bloudidea.inspection.ui.contract.period
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
 
-class BidSectionFragment : BaseFragment() {
+class PeriodManageFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_bid_section, container, false)
+        return inflater.inflate(R.layout.fragment_period_manage, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
