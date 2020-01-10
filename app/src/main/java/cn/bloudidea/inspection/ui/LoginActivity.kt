@@ -22,10 +22,10 @@ class LoginActivity : BaseActivity() {
             when {
                 etAccount?.text.isNullOrEmpty() -> {
                     //toast("账号不能为空")
-                    ToastUtils.Instance()?.showToast(this, "密码不能为空")
+                    ToastUtils.instance()?.showToast(this, "密码不能为空")
                 }
                 etPassword?.text.isNullOrEmpty() -> {
-                    ToastUtils.Instance()?.showToast(this, "密码不能为空")
+                    ToastUtils.instance()?.showToast(this, "密码不能为空")
                 }
                 else -> {
                     // val sp=this.getSharedPreferences("inspect",0)

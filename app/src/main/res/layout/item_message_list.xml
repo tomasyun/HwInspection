@@ -19,14 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9月中旬基础设施全面检查"
-            android:textColor="#333333"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tvMessageItemDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:text="2019-12-31 13:45:36"
             android:textColor="#999999"
             android:textSize="13sp" />
@@ -41,17 +41,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发起人"
-            android:textColor="#333333"
-            android:textSize="14sp" />
+            android:text="发起人:"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tvMessageItemSender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:text="张强"
-            android:textColor="#666666"
-            android:textSize="14sp" />
+            android:textColor="#999999"
+            android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

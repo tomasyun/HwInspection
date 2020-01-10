@@ -32,14 +32,14 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="12月份月度综合安全检查"
-                    android:textColor="#333333"
-                    android:textSize="14sp" />
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/tvInspectStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/hw_small_corner_green_bg"
                     android:paddingLeft="5dp"
@@ -63,16 +63,16 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="问题等级"
-                    android:textColor="#666666"
-                    android:textSize="13sp" />
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/tvLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/tvQuestionLevel"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/tvQuestionLevel"
                     android:background="@drawable/hw_small_corner_red_bg"
                     android:paddingLeft="5dp"
                     android:paddingTop="2dp"
@@ -86,7 +86,7 @@
                     android:id="@+id/tvInspectDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="2019-12-28 13:22:33"
                     android:textColor="#999999"
@@ -115,16 +115,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="检查人:"
-                android:textColor="#666666"
-                android:textSize="13sp" />
+                android:textColor="#333333"
+                android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="王磊"
-                android:textColor="#666666"
-                android:textSize="13sp" />
+                android:textColor="#999999"
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

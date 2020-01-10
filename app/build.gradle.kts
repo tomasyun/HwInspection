@@ -69,8 +69,8 @@ dependencies {
     // Androidx
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.core:core-ktx:1.1.0")
-    implementation("androidx.recyclerview:recyclerview:1.1.0-beta05")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.0-beta2")
+    implementation("androidx.recyclerview:recyclerview:1.2.0-alpha01")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.0-beta4")
     implementation("androidx.lifecycle:lifecycle-extensions:2.1.0")
 
     // Navigation

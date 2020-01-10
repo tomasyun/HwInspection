@@ -99,7 +99,7 @@ class AddInspectActivity : BaseActivity() {
             if (it) {
                 startAction()
             } else {
-                ToastUtils.Instance()?.showToast(this, "权限被拒绝")
+                ToastUtils.instance()?.showToast(this, "权限被拒绝")
             }
         }
     }

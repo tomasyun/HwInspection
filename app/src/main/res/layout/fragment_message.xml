@@ -33,7 +33,7 @@
         android:id="@+id/tbLayoutMessage"
         style="@style/BottomTabStyle"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_gravity="top"
         app:tabBackground="@color/bg_default"
         app:tabGravity="fill" />
@@ -41,7 +41,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorPrimary" />
+        android:background="#f5f5f5" />
 
     <androidx.viewpager.widget.ViewPager
         android:layout_marginBottom="55dp"

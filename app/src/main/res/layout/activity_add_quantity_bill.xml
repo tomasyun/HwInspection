@@ -67,6 +67,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etBillNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -102,6 +103,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etBillName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -137,6 +139,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/unit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -172,6 +175,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etContractPrice"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -207,6 +211,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etContractCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -242,6 +247,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etContractAccount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -277,6 +283,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etAuditCount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -307,11 +314,12 @@
                     android:layout_weight="3"
                     android:gravity="right"
                     android:paddingRight="20dp"
-                    android:text="清单编号:"
+                    android:text="审定金额:"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etAuditAccount"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -347,6 +355,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etParentBill"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"
@@ -382,6 +391,7 @@
                     android:textSize="15sp" />
 
                 <EditText
+                    android:id="@+id/etLevelType"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="7"

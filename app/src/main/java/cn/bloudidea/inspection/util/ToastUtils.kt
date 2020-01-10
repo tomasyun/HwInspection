@@ -112,12 +112,12 @@ class ToastUtils private constructor() {
     }
 
     companion object {
-        private var _instance: ToastUtils? = null
-        fun Instance(): ToastUtils? {
-            if (_instance == null) {
-                _instance = ToastUtils()
+        var instance: ToastUtils? = null
+        fun instance(): ToastUtils? {
+            if (instance == null) {
+                instance = ToastUtils()
             }
-            return _instance
+            return instance
         }
     }
 }

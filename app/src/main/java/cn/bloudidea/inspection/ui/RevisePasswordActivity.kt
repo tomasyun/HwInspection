@@ -22,13 +22,13 @@ class RevisePasswordActivity : BaseActivity() {
 
         btnRevise.setOnClickListener {
             if (etPasswordOld.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "原密码不能为空")
+                ToastUtils.instance()?.showToast(this, "原密码不能为空")
             } else if (etPasswordNew.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "新密码不能为空")
+                ToastUtils.instance()?.showToast(this, "新密码不能为空")
             } else if (etPasswordAgain.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "请再次输入新密码")
+                ToastUtils.instance()?.showToast(this, "请再次输入新密码")
             } else if (etPasswordAgain.text != etPasswordNew.text) {
-                ToastUtils.Instance()?.showToast(this, "抱歉!两次密码不一致")
+                ToastUtils.instance()?.showToast(this, "抱歉!两次密码不一致")
             } else {
 
             }

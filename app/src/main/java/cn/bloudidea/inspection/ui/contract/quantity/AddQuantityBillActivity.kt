@@ -13,5 +13,8 @@ class AddQuantityBillActivity : BaseActivity() {
         supportActionBar!!.title = ""
         tvAddQuantityBillTitle.text = "新增工程量清单"
         ivAddQuantityBill.setOnClickListener { finish() }
+        addQuantityBillFab.setOnClickListener {
+
+        }
     }
 }

@@ -40,16 +40,10 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvInspectList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
-            tools:listitem="@layout/item_inspect_list" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,36 +53,28 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/search"
-                app:hintEnabled="false"
-                app:passwordToggleEnabled="false">
-
-                <EditText
-                    android:id="@+id/etPasswordOld"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="@drawable/et_normal_white_bg"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="检查人/检查名称"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:text=""
-                    android:textColorHint="#999999"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_toStartOf="@+id/search"
+                android:background="@drawable/et_normal_white_bg"
+                android:gravity="center"
+                android:hint="检查人/检查名称"
+                android:inputType="text"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp"
+                android:text=""
+                android:textColorHint="#999999"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/hw_small_corner_red_bg"
                 android:paddingLeft="10dp"
                 android:paddingTop="5dp"
@@ -98,7 +84,11 @@
                 android:textColor="@color/bg_default"
                 android:textSize="13sp" />
         </RelativeLayout>
-    </FrameLayout>
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInspectList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_inspect_list" />
+    </LinearLayout>
 </LinearLayout>

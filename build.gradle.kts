@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.5.1")
+        classpath("com.android.tools.build:gradle:3.5.3")
         classpath(kotlin("gradle-plugin", version = "1.3.50"))
         classpath("android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0")
         classpath("com.akaita.android:easylauncher:1.3.1")

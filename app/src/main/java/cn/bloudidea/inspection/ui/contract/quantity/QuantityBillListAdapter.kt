@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
+import cn.bloudidea.inspection.util.ToastUtils
 
 class QuantityBillListAdapter(
     private val context: FragmentActivity,
@@ -32,6 +33,8 @@ class QuantityBillListAdapter(
                 it.auditAccount.text = data[position].auditAccount
                 it.parentBill.text = data[position].parentBill
                 it.levelType.text = data[position].levelType
+                it.edit.setOnClickListener { ToastUtils.instance()?.showToast(context, "编辑") }
+                it.delete.setOnClickListener { ToastUtils.instance()?.showToast(context, "删除") }
             }
         }
     }

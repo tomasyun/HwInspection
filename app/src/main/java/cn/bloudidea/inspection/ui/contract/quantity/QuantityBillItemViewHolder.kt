@@ -1,6 +1,7 @@
 package cn.bloudidea.inspection.ui.contract.quantity
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
@@ -16,6 +17,8 @@ class QuantityBillItemViewHolder(viewItem: View) : RecyclerView.ViewHolder(viewI
     var auditAccount: TextView
     var parentBill: TextView
     var levelType: TextView
+    var edit: ImageView
+    var delete: ImageView
 
     init {
         viewItem.let {
@@ -28,6 +31,8 @@ class QuantityBillItemViewHolder(viewItem: View) : RecyclerView.ViewHolder(viewI
             auditAccount = it.findViewById(R.id.auditAccount)
             parentBill = it.findViewById(R.id.parentBill)
             levelType = it.findViewById(R.id.levelType)
+            edit = it.findViewById(R.id.edit)
+            delete = it.findViewById(R.id.delete)
         }
     }
 }

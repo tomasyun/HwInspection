@@ -49,10 +49,10 @@ class MineFragment : BaseFragment(), View.OnClickListener {
                 )
             )
             R.id.relSetting -> {
-                ToastUtils.Instance()?.showToast(activity!!, "暂未开放")
+                ToastUtils.instance()?.showToast(activity!!, "暂未开放")
 //                startActivity(Intent(activity, SettingActivity::class.java))
             }
-            R.id.relUpgrade -> ToastUtils.Instance()?.showToast(activity!!, "当前最新版本")
+            R.id.relUpgrade -> ToastUtils.instance()?.showToast(activity!!, "当前最新版本")
             R.id.relLogOut -> logout()
         }
     }

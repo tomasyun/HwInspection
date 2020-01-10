@@ -18,11 +18,11 @@ class DisposeProxyActivity : BaseActivity() {
 
         btnDisposeProxy.setOnClickListener {
             if (etServiceIp.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "请输入服务器IP")
+                ToastUtils.instance()?.showToast(this, "请输入服务器IP")
             } else if (etPort.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "请输入端口号")
+                ToastUtils.instance()?.showToast(this, "请输入端口号")
             } else if (etPackageName.text.isNullOrEmpty()) {
-                ToastUtils.Instance()?.showToast(this, "请输入应用名称")
+                ToastUtils.instance()?.showToast(this, "请输入应用名称")
             } else {
                 
             }
