@@ -348,10 +348,7 @@
             android:id="@+id/fab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_edit"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/colorPrimary"
-            app:fab_label="删除"
+            android:src="@drawable/ic_delete_forever_white_24dp"
             app:fab_size="mini" />
 
         <cn.bloudidea.inspection.util.support.FloatingActionButton
@@ -359,19 +356,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_edit"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/colorPrimary"
-            app:fab_label="编辑"
             app:fab_size="mini" />
 
         <cn.bloudidea.inspection.util.support.FloatingActionButton
             android:id="@+id/fab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_edit"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/colorPrimary"
-            app:fab_label="添加"
+            android:src="@mipmap/fab_add"
             app:fab_size="mini" />
 
     </cn.bloudidea.inspection.util.support.FloatingActionMenu>
