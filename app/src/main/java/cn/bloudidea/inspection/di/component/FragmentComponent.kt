@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import cn.bloudidea.inspection.di.FragmentScope
 import cn.bloudidea.inspection.di.module.FragmentModule
 import cn.bloudidea.inspection.ui.contract.bid.BidSectionFragment
+import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillFragment
 import cn.bloudidea.inspection.ui.home.HomeFragment
 import cn.bloudidea.inspection.ui.message.HasReadFragment
 import cn.bloudidea.inspection.ui.message.MessageFragment
@@ -33,6 +34,7 @@ interface FragmentComponent {
     fun inject(fragment: HasReadFragment)
     fun inject(fragment: UnReadFragment)
     fun inject(fragment: BidSectionFragment)
+    fun inject(fragment: QuantityBillFragment)
 }
 
 fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
@@ -46,5 +48,6 @@ fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
         is HasReadFragment -> component.inject(fragment)
         is UnReadFragment -> component.inject(fragment)
         is BidSectionFragment -> component.inject(fragment)
+        is QuantityBillFragment -> component.inject(fragment)
     }
 }

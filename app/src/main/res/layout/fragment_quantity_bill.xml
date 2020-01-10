@@ -1,53 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f5f5f5"
-    android:orientation="vertical"
     tools:context=".ui.contract.ContractManagerActivity"
     tools:ignore="MissingPrefix">
 
     <LinearLayout
-        android:id="@+id/bidSelectLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/hw_small_corner_green_stroke_white_bg"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingTop="5dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="5dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            frontPath="Roboto-Bold.tff"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/etSearchQuantityBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvSearch"
+                android:background="@drawable/hw_small_corner_white_bg"
+                android:hint="按编码或名称查询"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/hw_small_corner_green_bg"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="3dp"
+                android:text="查询"
+                android:textColor="@color/bg_default"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bidSelectLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="标段:"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hw_small_corner_green_stroke_white_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
 
-        <TextView
-            android:id="@+id/tvQuantityBid"
-            frontPath="Roboto-Bold.tff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="A01"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            <TextView
+                frontPath="Roboto-Bold.tff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标段:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+            <TextView
+                android:id="@+id/tvQuantityBid"
+                frontPath="Roboto-Bold.tff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="A01"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuantityBill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="#f5f5f5" />
     </LinearLayout>
 
-
-</LinearLayout>
+    <cn.bloudidea.inspection.util.support.FloatingActionButton
+        android:id="@+id/quantityBillFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/fab_add"
+        app:fab_colorNormal="@color/colorPrimary"
+        app:fab_colorPressed="@color/colorPrimary" />
+</FrameLayout>
