@@ -4,6 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.bloudidea.inspection.di.FragmentScope
 import cn.bloudidea.inspection.ui.contract.bid.BidAdapter
+import cn.bloudidea.inspection.ui.contract.laborer.LaborerBillListAdapter
+import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageListAdapter
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillListAdapter
 import cn.bloudidea.inspection.ui.message.MessageListAdapter
 import cn.bloudidea.inspection.ui.message.MsgViewPagerAdapter
@@ -34,4 +36,12 @@ class FragmentModule(private val fragment: Fragment) {
     @Provides
     fun provideQuantityBillListAdapter(): QuantityBillListAdapter =
         QuantityBillListAdapter(fragment.activity!!, ArrayList())
+
+    @Provides
+    fun provideLaborerBillListAdapter(): LaborerBillListAdapter =
+        LaborerBillListAdapter(fragment.activity!!, ArrayList())
+
+    @Provides
+    fun provideProvisionGoldManageAdapter():ProvisionGoldManageListAdapter=
+        ProvisionGoldManageListAdapter(fragment.activity!!,ArrayList())
 }

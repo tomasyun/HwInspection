@@ -6,6 +6,8 @@ import cn.bloudidea.inspection.di.DaggerViewModelFactory
 import cn.bloudidea.inspection.di.ViewModelKey
 import cn.bloudidea.inspection.ui.*
 import cn.bloudidea.inspection.ui.contract.bid.BidSectionViewModel
+import cn.bloudidea.inspection.ui.contract.laborer.LaborerBillViewModel
+import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageViewModel
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillViewModel
 import cn.bloudidea.inspection.ui.home.HomeViewModel
 import cn.bloudidea.inspection.ui.message.HasReadViewModel
@@ -97,4 +99,14 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(QuantityBillViewModel::class)
     abstract fun bindQuantityBillViewModel(viewModel: QuantityBillViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LaborerBillViewModel::class)
+    abstract fun bindLaborerBillViewModel(viewModel:LaborerBillViewModel):ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProvisionGoldManageViewModel::class)
+    abstract fun bindProvisionGoldManageViewModel(viewModel:ProvisionGoldManageViewModel):ViewModel
 }

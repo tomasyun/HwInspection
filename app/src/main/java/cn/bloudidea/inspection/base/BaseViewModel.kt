@@ -1,5 +1,6 @@
 package cn.bloudidea.inspection.base
 
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
 import cn.bloudidea.inspection.data.prefs.AppPrefsHelper
 import cn.bloudidea.inspection.data.prefs.PrefsHelper
@@ -17,7 +18,9 @@ abstract class BaseViewModel : ViewModel, LifecycleScopeProvider<BaseViewModel.V
         lazy { BehaviorSubject.createDefault(ViewModelEvent.CREATED) }
     private val lifecycleEvents by lifecycleEventsDelegate
 
-    protected lateinit var prefsHelper: PrefsHelper
+    private lateinit var prefsHelper: PrefsHelper
+
+    var mIsLoading = ObservableBoolean();
 
     enum class ViewModelEvent {
         CREATED, CLEARED

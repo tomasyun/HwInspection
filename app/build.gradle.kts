@@ -53,6 +53,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    dataBinding { isEnabled = true }
+
 //    dexOptions {
 //        preDexLibraries =true
 //        maxProcessCount =8
