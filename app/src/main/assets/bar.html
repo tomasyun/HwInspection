@@ -2,6 +2,7 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <title>Insert title here</title>
     <style>
@@ -13,26 +14,37 @@
             align: left;
             valign: left;
         }
+
+
+
+
+
+
     </style>
     <!-- 引入 ECharts 文件 -->
     <script src="./echarts.min.js"></script>
 </head>
 <body>
 <div id="main"
-     style="height: 100%; width: 100%; border: 0px; text-align: left; align: left; valign: left;"></div>
+     style="height: 100%; width: 100%; border: 0px; text-align: left; align: left; valign: left;">
+</div>
+
+<div id="pie_echarts"
+     style="width: 100%;height:100%;border: 0px; text-align: left; align: left; valign: left;">
+</div>
+
 <script type="text/javascript">
     //x轴数据显示数据
-    var xName = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月',
-        '十月', '十一月', '十二月'];
+    var xName = ['一', '二', '三', '四', '五', '六', '七', '八', '九',
+        '十', '十一', '十二'];
     // 已关控
     var yname = [100.5, 123, 86.5, 58.9, 90, 92.4, 88.7, 69.2, 98, 75,
         97.8, 109];
     //未管控
     var wname = [50, 48, 55, 99, 100, 98.9, 87.3, 55, 83, 59, 68, 88];
     var lengend = ['话费', '流量'];
-    var sum = [80, 80, 80, 80, 80, 80, 80, 80, 80, 80];
-    var barwidth = 60;
-
+    // var sum = [80, 80, 80, 80, 80, 80, 80, 80, 80, 80];
+    var barwidth = 20;
     function createBarLineChart() {
         var myChart = echarts.init(document.getElementById('main'));
         var option = {
@@ -41,7 +53,7 @@
                 show: true,
                 orient: 'horizontal',
                 // 图例之间的距离
-                itemGap: 50,
+                itemGap: 30,
                 // 图例的高度
                 itemHeight: 10,
                 data: [{
@@ -53,7 +65,7 @@
                 }],
                 textStyle: {
                     color: 'black',
-                    fontSize: 16,
+                    fontSize: 13,
                 },
             },
             grid: {
@@ -62,8 +74,8 @@
                 right: '2%',
                 bottom: '3%',
                 show: false,
+                 // 是否包含标题
                 containLabel: true
-                // 是否包含标题
             },
             tooltip: {
                 show: true,
@@ -131,6 +143,53 @@
                 },
             },],
         };
+        myChart.setOption(option);
+    }
+
+ function createPieChart(){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('pie_echarts'));
+        // 指定图表的配置项和数据
+        option = {
+           // title: {
+             //   text: 'bug分布',
+               // x: 'left'
+            //},
+            tooltip: {
+                trigger: 'item',
+               // formatter: "{a} <br/>{b} : {c} ({d}%)"
+                formatter: "{a} <br/>{b} : {d}%"
+            },
+            color: ['#CD5C5C', '#00CED1', '#9ACD32', '#FFC0CB'],
+            stillShowZeroSum: false,
+           legend: {
+              orient: 'vertical',
+              left: 'left',
+              data: ['直接访问','邮件营销','联盟广告','视频广告']
+            },
+            series: [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: '60%',
+                    left: ['60%', '60%'],
+                    data: [
+                        {value: 1, name: '直接访问'},
+                        {value: 3, name: '邮件营销'},
+                        {value: 7, name: '联盟广告'},
+                        {value: 4, name: '视频广告'},
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(128, 128, 128, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     }
 </script>

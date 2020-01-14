@@ -13,4 +13,12 @@
         android:id="@+id/tunnelRateBroad"
         android:checked="true"
         android:title="隧道进度看板" />
+    <item
+        android:id="@+id/bridgeImageRate"
+        android:checked="true"
+        android:title="桥梁形象进度" />
+    <item
+        android:id="@+id/tunnelImageRate"
+        android:checked="true"
+        android:title="隧道形象进度" />
 </menu>

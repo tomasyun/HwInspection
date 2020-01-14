@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView3"
+    <cn.bloudidea.inspection.util.X5WebView
+        android:id="@+id/rateBoardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="形象进度看板"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+    </cn.bloudidea.inspection.util.X5WebView>
 </LinearLayout>

@@ -7,7 +7,7 @@
     tools:context=".ui.contract.ContractManagerActivity">
 
     <cn.bloudidea.inspection.util.X5WebView
-        android:id="@+id/boardView"
+        android:id="@+id/contractBoardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center">

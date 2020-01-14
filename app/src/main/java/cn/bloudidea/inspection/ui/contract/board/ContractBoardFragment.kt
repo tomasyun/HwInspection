@@ -25,7 +25,7 @@ class ContractBoardFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        boardView.loadUrl("file:///android_asset/test02.html")
+        contractBoardView.loadUrl("file:///android_asset/test02.html")
         val client: WebViewClient =
             object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(
@@ -45,7 +45,7 @@ class ContractBoardFragment : BaseFragment() {
                     webView.loadUrl("javascript:createChart();")
                 }
             }
-        boardView.webViewClient = client
+        contractBoardView.webViewClient = client
     }
 
     fun refreshLineChart() {
@@ -65,6 +65,6 @@ class ContractBoardFragment : BaseFragment() {
         }
         val optionString = option.toString()
         val call = "javascript:loadEcharts('$optionString')"
-        boardView.loadUrl(call)
+        contractBoardView.loadUrl(call)
     }
 }

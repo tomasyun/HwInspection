@@ -72,6 +72,8 @@ class RateManageActivity : BaseActivity() {
                 R.id.imageRateBroad -> tvRateManageTitle.text = "形象进度看板"
                 R.id.bridgeRateBroad -> tvRateManageTitle.text = "桥梁进度看板"
                 R.id.tunnelRateBroad -> tvRateManageTitle.text = "隧道进度看板"
+                R.id.bridgeImageRate -> tvRateManageTitle.text = "桥梁形象进度"
+                R.id.tunnelImageRate -> tvRateManageTitle.text = "隧道形象进度"
             }
             handled
         }
