@@ -12,11 +12,15 @@ import cn.bloudidea.inspection.ui.AcceptanceActivity
 import cn.bloudidea.inspection.ui.InspectListActivity
 import cn.bloudidea.inspection.ui.StatisticsActivity
 import cn.bloudidea.inspection.ui.contract.ContractManagerActivity
+import cn.bloudidea.inspection.ui.rate.RateManageActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment() {
-    private val vm by lazy { getViewModel(HomeViewModel::class.java) }
+    private val vm by lazy {
+        getViewModel(HomeViewModel::class.java)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -100,6 +104,15 @@ class HomeFragment : BaseFragment() {
                 Intent(
                     activity,
                     ContractManagerActivity::class.java
+                )
+            )
+        }
+
+        rateManage.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity,
+                    RateManageActivity::class.java
                 )
             )
         }

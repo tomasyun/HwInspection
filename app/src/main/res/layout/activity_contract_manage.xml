@@ -48,7 +48,6 @@
             app:navGraph="@navigation/contract_navigation_graph" />
     </LinearLayout>
 
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/contract_manage_navigation_view"
         style="@style/Widget.Design.NavigationView"
@@ -60,7 +59,7 @@
         app:itemIconPadding="20dp"
         app:itemIconTint="@color/black"
         app:itemTextAppearance="@style/MenuTextStyle"
-        app:menu="@menu/contract_manage_drawer">
+        app:menu="@menu/contract_manage_menu">
 
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

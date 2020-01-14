@@ -11,7 +11,7 @@ import androidx.navigation.ui.NavigationUI
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_acceptance.*
-import kotlinx.android.synthetic.main.activity_contract_manager.*
+import kotlinx.android.synthetic.main.activity_contract_manage.*
 import timber.log.Timber
 import java.lang.ref.WeakReference
 
@@ -20,7 +20,7 @@ class ContractManagerActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Timber.d("=====onCreate=====")
-        setContentView(R.layout.activity_contract_manager)
+        setContentView(R.layout.activity_contract_manage)
         setSupportActionBar(tbAcceptance)
         supportActionBar?.title = ""
         tvContractManageTitle.text = "合同看板"
@@ -87,9 +87,9 @@ class ContractManagerActivity : BaseActivity() {
 
     private fun matchDestination(destination: NavDestination, itemId: Int): Boolean {
         var currentDestination = destination;
-        while (currentDestination.getId() != itemId && currentDestination.getParent() != null) {
-            currentDestination = currentDestination.getParent()!!;
+        while (currentDestination.id != itemId && currentDestination.parent != null) {
+            currentDestination = currentDestination.parent!!;
         }
-        return currentDestination.getId() == itemId;
+        return currentDestination.id == itemId;
     }
 }
