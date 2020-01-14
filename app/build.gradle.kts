@@ -53,12 +53,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    dataBinding { isEnabled = true }
+//    dataBinding { isEnabled = true }
 
-//    dexOptions {
-//        preDexLibraries =true
-//        maxProcessCount =8
-//    }
+    dexOptions {
+        preDexLibraries = true
+        maxProcessCount = 8
+        incremental = true
+        javaMaxHeapSize = "8g"
+    }
 }
 
 dependencies {
