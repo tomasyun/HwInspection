@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <title>ECharts</title>
     <style>
-html,body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    align: left;
-    valign: left;
-}
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            align: left;
+            valign: left;
+        }
 
     </style>
     <!-- 引入 echarts.js -->
@@ -21,10 +21,11 @@ html,body {
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="main"
-     style="height: 100%; width: 100%; border: 0px; text-align: left; align: left; valign: left;"></div>
+     style="height: 100%; width: 100%; border: 0px; text-align: left; align: left; valign: left;">
+</div>
 <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-function createChart() {
+    // 基于准备好的dom，初始化echarts实例
+    function createChart() {
         var myChart = echarts.init(document.getElementById('main'));
         option = {
             color: ['#3398DB'],
@@ -35,127 +36,30 @@ function createChart() {
                   data: ['直接访问']
               }, */
             xAxis: [{
-                    /*  name: "学程数", */
-                    /*  max: "400", */
-                    type: 'category',
-                    /*  position: 'bottom', */
-                    data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-<!--                    offset: -80,-->
-                    axisPointer: {
-                        type: 'none'
-                    },
-                    axisLabel: {
-                        textStyle: {
-                            color: "#999"
-                        }
-                    },
-                    axisTick: {
-                        show: false
-                    },
-                    axisLine: {
-                        show: false
-                    },
-                }
-<!--                {-->
-<!--                    /*  name: "总题数", */-->
-<!--                    type: 'category',-->
-<!--                    position: 'bottom',-->
-<!--                    data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,23 ],-->
-<!--                    offset: 10,-->
-<!--                    axisPointer: {-->
-<!--                        type: 'none'-->
-<!--                    },-->
-<!--                    axisLabel: {-->
-<!--                        textStyle: {-->
-<!--                            color: "#999"-->
-<!--                        }-->
-<!--                    },-->
-<!--                    axisTick: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                    axisLine: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                }-->
-<!--                {-->
-<!--                    /*    name: "错题数", */-->
-<!--                    type: 'category',-->
-<!--                    data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],-->
-<!--                    axisPointer: {-->
-<!--                        type: 'none'-->
-<!--                    },-->
-<!--                    axisLabel: {-->
-<!--                        textStyle: {-->
-<!--                            color: "#999"-->
-<!--                        }-->
-<!--                    },-->
-<!--                    axisTick: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                    axisLine: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                    position: "top",-->
-<!--                    offset: -30,-->
-<!--                }-->
-<!--                {-->
-<!--                    /* name: "错题数", */-->
-<!--                    type: 'category',-->
-<!--                    data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,-->
-<!--                        23-->
-<!--                    ],-->
-<!--                    axisPointer: {-->
-<!--                        type: 'none'-->
-<!--                    },-->
-<!--                    axisLabel: {-->
-<!--                        textStyle: {-->
-<!--                            color: "#999"-->
-<!--                        }-->
-<!--                    },-->
-<!--                    axisTick: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                    axisLine: {-->
-<!--                        show: false-->
-<!--                    },-->
-<!--                    position: "top",-->
-<!--                    offset: -120,-->
-<!--                }-->
+                type: 'category',
+                data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                axisPointer: {
+                    type: 'none'
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: "#999"
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+            }
             ],
             yAxis: [{
-                    name: "万元",
-                    type: 'value'
-                }
-<!--                ,-->
-<!--                {-->
-<!--                    name: "总题数",-->
-<!--                    type: 'value',-->
-<!--                    offset: -230,-->
-<!--                },-->
-<!--                {-->
-<!--                name: "总题数2",-->
-<!--                type: 'value',-->
-<!--                offset: -430,-->
-<!--                },-->
-<!--                {-->
-<!--                    name: "错题数",-->
-<!--                    type: 'value',-->
-<!--                    show: true,-->
-<!--                    axisLabel: {-->
-<!--                        formatter: '{value} %'-->
-<!--                    },-->
-<!--                    min: 10,-->
-<!--                    max: 80-->
-<!--                }-->
+                name: "万元",
+                type: 'value'
+            }
             ],
             series: [
-<!--            {-->
-<!--                    name: "学程数",-->
-<!--                    type: "line",-->
-<!--                    xAxisIndex: 1,-->
-<!--                    yAxisIndex: 1,-->
-<!--                    data: [1, 2, 4, 5, 8, 9, 8, 6, 5, 9, 1, 2, 4, 5, 8, 9, 8, 6, 5, 9, 8, 4, 9, 6]-->
-<!--                },-->
                 {
                     name: "总题数",
                     type: "bar",
@@ -172,7 +76,7 @@ function createChart() {
         }
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
-}
+    }
 </script>
 </body>
 </html>

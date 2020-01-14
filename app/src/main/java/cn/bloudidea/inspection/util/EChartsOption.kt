@@ -6,7 +6,7 @@ import com.github.abel533.echarts.code.Trigger
 import com.github.abel533.echarts.json.GsonOption
 import com.github.abel533.echarts.series.Line
 
-object EchartOption {
+object EChartsOption {
     fun getLineChartOptions(
         xAxis: Array<String?>,
         yAxis: Array<Int?>

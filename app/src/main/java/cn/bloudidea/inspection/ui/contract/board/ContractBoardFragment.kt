@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
-import cn.bloudidea.inspection.util.EchartOption
+import cn.bloudidea.inspection.util.EChartsOption
 import com.github.abel533.echarts.json.GsonOption
 import com.tencent.smtt.sdk.WebView
 import com.tencent.smtt.sdk.WebViewClient
@@ -51,7 +51,7 @@ class ContractBoardFragment : BaseFragment() {
     fun refreshLineChart() {
         val x: Array<String?> = arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
         val y: Array<Int?> = arrayOf(820, 932, 901, 934, 1290, 1330, 1320)
-        refreshEchartsWithOption(EchartOption.getLineChartOptions(x, y));
+        refreshEChartsWithOption(EChartsOption.getLineChartOptions(x, y));
     }
 
     /**刷新图表
@@ -59,7 +59,7 @@ class ContractBoardFragment : BaseFragment() {
      * 不能在第一时间就用此方法来显示图表，因为第一时间html的标签还未加载完成，不能获取到标签值
      * @param option
      */
-    fun refreshEchartsWithOption(option: GsonOption?) {
+    private fun refreshEChartsWithOption(option: GsonOption?) {
         if (option == null) {
             return
         }
