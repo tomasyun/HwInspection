@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
+import cn.bloudidea.inspection.util.ToastUtils
 
 class LaborerBillListAdapter(
     private val context: FragmentActivity,
@@ -24,6 +25,8 @@ class LaborerBillListAdapter(
                 it.laborerBillUnit.text = data[position].laborerBillUnit
                 it.laborerBillPrice.text = data[position].laborerBillPrice
                 it.laborerBillLevelType.text = data[position].laborerBillLevelType
+                it.edit.setOnClickListener { ToastUtils.instance()!!.showToast(context, "编辑") }
+                it.delete.setOnClickListener { ToastUtils.instance()!!.showToast(context, "删除") }
             }
         }
     }

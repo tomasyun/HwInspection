@@ -58,8 +58,6 @@ android {
     dexOptions {
         preDexLibraries = true
         maxProcessCount = 8
-        incremental = true
-        javaMaxHeapSize = "8g"
     }
 }
 

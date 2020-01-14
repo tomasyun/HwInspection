@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
 
 class LaborerBillItemViewHolder : RecyclerView.ViewHolder {
-     lateinit var laborerBillName: TextView
-     lateinit var laborerBillUnit: TextView
-     lateinit var laborerBillPrice: TextView
-     lateinit var laborerBillLevelType: TextView
+    lateinit var laborerBillName: TextView
+    lateinit var laborerBillUnit: TextView
+    lateinit var laborerBillPrice: TextView
+    lateinit var laborerBillLevelType: TextView
+    lateinit var edit: TextView
+    lateinit var delete: TextView
 
     constructor(viewItem: View) : super(viewItem) {
         viewItem?.let {
@@ -17,6 +19,8 @@ class LaborerBillItemViewHolder : RecyclerView.ViewHolder {
             laborerBillUnit = it.findViewById(R.id.laborerBillUnit)
             laborerBillPrice = it.findViewById(R.id.laborerBillPrice)
             laborerBillLevelType = it.findViewById(R.id.laborerBillLevelType)
+            edit = it.findViewById(R.id.edit)
+            delete = it.findViewById(R.id.delete)
         }
     }
 }

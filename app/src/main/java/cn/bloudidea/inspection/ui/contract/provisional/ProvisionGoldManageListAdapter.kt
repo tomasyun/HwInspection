@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
+import cn.bloudidea.inspection.util.ToastUtils
 import javax.inject.Inject
 
 class ProvisionGoldManageListAdapter @Inject constructor(
@@ -29,6 +30,8 @@ class ProvisionGoldManageListAdapter @Inject constructor(
                 it.provisionGoldContractCount.text = data[position].provisionGoldContractCount
                 it.provisionGoldContractAccount.text = data[position].provisionGoldContractAccount
                 it.provisionGoldUnit.text = data[position].provisionGoldUnit
+                it.edit.setOnClickListener { ToastUtils.instance()?.showToast(context, "编辑") }
+                it.delete.setOnClickListener { ToastUtils.instance()?.showToast(context, "删除") }
             }
         }
     }
