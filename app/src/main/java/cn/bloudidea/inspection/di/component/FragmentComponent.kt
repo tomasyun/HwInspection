@@ -13,6 +13,7 @@ import cn.bloudidea.inspection.ui.message.MessageFragment
 import cn.bloudidea.inspection.ui.message.UnReadFragment
 import cn.bloudidea.inspection.ui.mine.MineFragment
 import cn.bloudidea.inspection.ui.pic.PicFragment
+import cn.bloudidea.inspection.ui.rate.bridge.BridgeImageRateFragment
 import dagger.Subcomponent
 
 @FragmentScope
@@ -39,6 +40,7 @@ interface FragmentComponent {
     fun inject(fragment: QuantityBillFragment)
     fun inject(fragment: LaborerBillFragment)
     fun inject(fragment:ProvisionalGoldManageFragment)
+    fun inject(fragment: BridgeImageRateFragment)
 }
 
 fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
@@ -55,5 +57,6 @@ fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
         is QuantityBillFragment -> component.inject(fragment)
         is LaborerBillFragment -> component.inject(fragment)
         is ProvisionalGoldManageFragment->component.inject(fragment)
+        is BridgeImageRateFragment -> component.inject(fragment)
     }
 }

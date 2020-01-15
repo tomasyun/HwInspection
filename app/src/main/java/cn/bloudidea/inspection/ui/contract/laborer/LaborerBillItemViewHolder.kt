@@ -1,6 +1,7 @@
 package cn.bloudidea.inspection.ui.contract.laborer
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
@@ -10,8 +11,8 @@ class LaborerBillItemViewHolder : RecyclerView.ViewHolder {
     lateinit var laborerBillUnit: TextView
     lateinit var laborerBillPrice: TextView
     lateinit var laborerBillLevelType: TextView
-    lateinit var edit: TextView
-    lateinit var delete: TextView
+    lateinit var edit: ImageView
+    lateinit var delete: ImageView
 
     constructor(viewItem: View) : super(viewItem) {
         viewItem?.let {

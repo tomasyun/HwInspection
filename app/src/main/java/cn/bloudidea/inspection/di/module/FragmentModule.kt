@@ -9,6 +9,7 @@ import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageListAd
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillListAdapter
 import cn.bloudidea.inspection.ui.message.MessageListAdapter
 import cn.bloudidea.inspection.ui.message.MsgViewPagerAdapter
+import cn.bloudidea.inspection.ui.rate.bridge.BridgeImageRateViewPagerAdapter
 import dagger.Module
 import dagger.Provides
 
@@ -42,6 +43,10 @@ class FragmentModule(private val fragment: Fragment) {
         LaborerBillListAdapter(fragment.activity!!, ArrayList())
 
     @Provides
-    fun provideProvisionGoldManageAdapter():ProvisionGoldManageListAdapter=
-        ProvisionGoldManageListAdapter(fragment.activity!!,ArrayList())
+    fun provideProvisionGoldManageAdapter(): ProvisionGoldManageListAdapter =
+        ProvisionGoldManageListAdapter(fragment.activity!!, ArrayList())
+
+    @Provides
+    fun provideBridgeImageRateViewPagerAdapter(): BridgeImageRateViewPagerAdapter =
+        BridgeImageRateViewPagerAdapter(fragment.childFragmentManager)
 }

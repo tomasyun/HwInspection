@@ -14,5 +14,17 @@
         app:tabBackground="@color/bg_default"
         app:tabGravity="fill" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpBridgeImageRate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:background="@color/bg_default"
+        android:clipToPadding="false" />
 
 </LinearLayout>

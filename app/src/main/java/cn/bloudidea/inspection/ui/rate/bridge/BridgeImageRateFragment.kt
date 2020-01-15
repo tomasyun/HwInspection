@@ -6,8 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.fragment_bridge_image_rate.*
+import javax.inject.Inject
 
 class BridgeImageRateFragment : BaseFragment() {
+
+    @Inject
+    lateinit var pgAdapter: BridgeImageRateViewPagerAdapter
+
+    private lateinit var tabs: MutableList<TabLayout.Tab>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,5 +27,29 @@ class BridgeImageRateFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tabs = ArrayList<TabLayout.Tab>();
+        tabs.add(tbBridgeImageRate.newTab().setText("进度填报"))
+        tabs.add(tbBridgeImageRate.newTab().setText("计划编制"))
+        for (i in 0 until tabs.size) {
+            tbBridgeImageRate.addTab(tabs[i])
+        }
+        pgAdapter.count = tabs.size;
+        vpBridgeImageRate.adapter = pgAdapter
+        vpBridgeImageRate.currentItem = 0;
+        vpBridgeImageRate.offscreenPageLimit = tbBridgeImageRate.tabCount
+        vpBridgeImageRate.addOnPageChangeListener(
+            TabLayout.TabLayoutOnPageChangeListener(
+                tbBridgeImageRate
+            )
+        )
+        tbBridgeImageRate.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                vpBridgeImageRate.currentItem = tab!!.position
+            }
+        })
     }
 }
