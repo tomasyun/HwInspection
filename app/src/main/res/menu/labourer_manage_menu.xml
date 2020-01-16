@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/employeeDataSource"
+        android:checked="true"
+        android:title="数据看板" />
+
+    <item
+        android:id="@+id/employeeManage"
+        android:checked="true"
+        android:title="人员管理" />
+
+    <item
+        android:id="@+id/employeeTraining"
+        android:checked="true"
+        android:title="培训教育" />
+    <item
+        android:id="@+id/employeePeccancy"
+        android:checked="true"
+        android:title="违章管理" />
+    <item
+        android:id="@+id/employeeBaseData"
+        android:checked="true"
+        android:title="基础数据" />
+    <item
+        android:id="@+id/employeeSalary"
+        android:checked="true"
+        android:title="工资管理" />
+    <item
+        android:id="@+id/employeeReportForm"
+        android:checked="true"
+        android:title="报表管理" />
+
+</menu>

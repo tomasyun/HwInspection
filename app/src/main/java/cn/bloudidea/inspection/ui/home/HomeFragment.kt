@@ -12,6 +12,7 @@ import cn.bloudidea.inspection.ui.AcceptanceActivity
 import cn.bloudidea.inspection.ui.InspectListActivity
 import cn.bloudidea.inspection.ui.StatisticsActivity
 import cn.bloudidea.inspection.ui.contract.ContractManagerActivity
+import cn.bloudidea.inspection.ui.labourer.LabourerManageActivity
 import cn.bloudidea.inspection.ui.rate.RateManageActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -113,6 +114,15 @@ class HomeFragment : BaseFragment() {
                 Intent(
                     activity,
                     RateManageActivity::class.java
+                )
+            )
+        }
+
+        labourerManage.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity,
+                    LabourerManageActivity::class.java
                 )
             )
         }

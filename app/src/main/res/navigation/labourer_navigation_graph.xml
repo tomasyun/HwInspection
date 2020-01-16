@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/labourer_navigation_graph"
+    app:startDestination="@id/employeeBaseData">
+
+    <fragment
+        android:id="@+id/employeeBaseData"
+        android:name="cn.bloudidea.inspection.ui.labourer.basedata.EmployeeBaseDataFragment"
+        android:label="fragment_employee_base_data"
+        tools:layout="@layout/fragment_employee_base_data" />
+
+    <fragment
+        android:id="@+id/employeeDataSource"
+        android:name="cn.bloudidea.inspection.ui.labourer.datasource.EmployeeDataSourceFragment"
+        android:label="fragment_employee_data_source"
+        tools:layout="@layout/fragment_employee_data_source" />
+
+    <fragment
+        android:id="@+id/employeeManage"
+        android:name="cn.bloudidea.inspection.ui.labourer.employee.EmployeeManageFragment"
+        android:label="fragment_employee_manage"
+        tools:layout="@layout/fragment_employee_manage" />
+
+    <fragment
+        android:id="@+id/employeePeccancy"
+        android:name="cn.bloudidea.inspection.ui.labourer.peccancy.EmployeePeccancyFragment"
+        android:label="fragment_employee_peccancy"
+        tools:layout="@layout/fragment_employee_peccancy" />
+
+    <fragment
+        android:id="@+id/employeeReportForm"
+        android:name="cn.bloudidea.inspection.ui.labourer.report.EmployeeReportFormFragment"
+        android:label="fragment_employee_report_form"
+        tools:layout="@layout/fragment_employee_report_form" />
+
+    <fragment
+        android:id="@+id/employeeSalary"
+        android:name="cn.bloudidea.inspection.ui.labourer.salary.EmployeeSalaryFragment"
+        android:label="fragment_empolyee_salary"
+        tools:layout="@layout/fragment_empolyee_salary" />
+    <fragment
+        android:id="@+id/employeeTraining"
+        android:name="cn.bloudidea.inspection.ui.labourer.training.EmployeeTrainingFragment"
+        android:label="fragment_employee_traning"
+        tools:layout="@layout/fragment_employee_training" />
+</navigation>

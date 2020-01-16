@@ -288,6 +288,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/labourerManage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1dp"
@@ -296,6 +297,24 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp">
 
+                    <ImageView
+                        android:id="@+id/ivLabourerManage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_acceptance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivLabourerManage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="劳务管理"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
