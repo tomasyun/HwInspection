@@ -43,6 +43,7 @@ class MessageFragment : BaseFragment() {
         vpMessage.currentItem = 0
         vpMessage.offscreenPageLimit = tbLayoutMessage.tabCount
         vpMessage.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tbLayoutMessage))
+//        vpMessage.setPageTransformer(true, DepthPageTransformer())
         tbLayoutMessage.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
 

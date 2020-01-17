@@ -8,9 +8,16 @@
     android:orientation="vertical"
     tools:ignore="MissingPrefix">
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@mipmap/app_logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text=""
         android:textColor="@color/black"

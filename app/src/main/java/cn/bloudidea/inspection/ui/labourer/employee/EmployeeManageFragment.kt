@@ -39,6 +39,7 @@ class EmployeeManageFragment : BaseFragment() {
         vpEmployeeManage.adapter = pgAdapter
         vpEmployeeManage.currentItem = 0
         vpEmployeeManage.offscreenPageLimit = tbEmployeeManage.tabCount
+//        vpEmployeeManage.setPageTransformer(true, DepthPageTransformer())
         vpEmployeeManage.addOnPageChangeListener(
             TabLayout.TabLayoutOnPageChangeListener(
                 tbEmployeeManage
