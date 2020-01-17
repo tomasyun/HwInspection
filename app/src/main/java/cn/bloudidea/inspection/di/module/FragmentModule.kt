@@ -7,6 +7,7 @@ import cn.bloudidea.inspection.ui.contract.bid.BidAdapter
 import cn.bloudidea.inspection.ui.contract.laborer.LaborerBillListAdapter
 import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageListAdapter
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillListAdapter
+import cn.bloudidea.inspection.ui.labourer.employee.EmployeeManageViewPagerAdapter
 import cn.bloudidea.inspection.ui.message.MessageListAdapter
 import cn.bloudidea.inspection.ui.message.MsgViewPagerAdapter
 import cn.bloudidea.inspection.ui.rate.bridge.BridgeImageRateViewPagerAdapter
@@ -49,4 +50,8 @@ class FragmentModule(private val fragment: Fragment) {
     @Provides
     fun provideBridgeImageRateViewPagerAdapter(): BridgeImageRateViewPagerAdapter =
         BridgeImageRateViewPagerAdapter(fragment.childFragmentManager)
+
+    @Provides
+    fun provideEmployeeManageViewPagerAdapter(): EmployeeManageViewPagerAdapter =
+        EmployeeManageViewPagerAdapter(fragment.childFragmentManager)
 }

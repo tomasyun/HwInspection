@@ -8,6 +8,7 @@ import cn.bloudidea.inspection.ui.contract.laborer.LaborerBillFragment
 import cn.bloudidea.inspection.ui.contract.provisional.ProvisionalGoldManageFragment
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillFragment
 import cn.bloudidea.inspection.ui.home.HomeFragment
+import cn.bloudidea.inspection.ui.labourer.employee.EmployeeManageFragment
 import cn.bloudidea.inspection.ui.message.HasReadFragment
 import cn.bloudidea.inspection.ui.message.MessageFragment
 import cn.bloudidea.inspection.ui.message.UnReadFragment
@@ -41,6 +42,7 @@ interface FragmentComponent {
     fun inject(fragment: LaborerBillFragment)
     fun inject(fragment:ProvisionalGoldManageFragment)
     fun inject(fragment: BridgeImageRateFragment)
+    fun inject(fragment: EmployeeManageFragment)
 }
 
 fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
@@ -58,5 +60,6 @@ fun FragmentComponent.Builder.buildAndInject(fragment: Fragment) {
         is LaborerBillFragment -> component.inject(fragment)
         is ProvisionalGoldManageFragment->component.inject(fragment)
         is BridgeImageRateFragment -> component.inject(fragment)
+        is EmployeeManageFragment -> component.inject(fragment)
     }
 }
