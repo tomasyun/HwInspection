@@ -32,5 +32,7 @@ class LaborerBillFragment : BaseFragment() {
         rvLaborerBill.adapter = adapter
         rvLaborerBill.layoutManager = layoutManager
         adapter.addItem(vm.data)
+
+        fab.setOnClickListener { rvLaborerBill.smoothScrollToPosition(0) }
     }
 }

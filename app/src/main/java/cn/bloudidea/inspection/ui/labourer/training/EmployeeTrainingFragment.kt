@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import cn.bloudidea.inspection.util.support.EasyStateView
+import kotlinx.android.synthetic.main.fragment_employee_training.*
 
 class EmployeeTrainingFragment : BaseFragment() {
 
@@ -19,5 +21,6 @@ class EmployeeTrainingFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        employeeTrainingStateView.showViewState(EasyStateView.VIEW_EMPTY)
     }
 }

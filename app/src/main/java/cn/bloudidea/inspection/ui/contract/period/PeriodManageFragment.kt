@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import cn.bloudidea.inspection.util.support.EasyStateView
+import kotlinx.android.synthetic.main.fragment_period_manage.*
 
 class PeriodManageFragment : BaseFragment() {
     override fun onCreateView(
@@ -18,5 +20,6 @@ class PeriodManageFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        periodManageStateView.showViewState(EasyStateView.VIEW_EMPTY)
     }
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import cn.bloudidea.inspection.util.support.EasyStateView
 import kotlinx.android.synthetic.main.fragment_has_read.*
 import javax.inject.Inject
 
@@ -32,6 +33,12 @@ class HasReadFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         rvMessageHasRead.layoutManager = linearLayout
         rvMessageHasRead.adapter = msgAdapter
-        msgAdapter.addItems(vm.data)
+
+        if (vm.data.isEmpty()) {
+            hasReadFragment.showViewState(EasyStateView.VIEW_EMPTY)
+        } else {
+            msgAdapter.addItems(vm.data)
+
+        }
     }
 }

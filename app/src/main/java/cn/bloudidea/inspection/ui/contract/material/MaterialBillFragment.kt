@@ -32,9 +32,11 @@ class MaterialBillFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         rvMaterialBill.layoutManager = layoutManager
         rvMaterialBill.adapter = adapter
-        adapter.addItems(vm.data)
+
         if (vm.data.isEmpty()) {
             materialBillStateView.showViewState(EasyStateView.VIEW_EMPTY)
+        } else {
+            adapter.addItems(vm.data)
         }
     }
 }
