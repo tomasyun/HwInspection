@@ -7,6 +7,7 @@ import cn.bloudidea.inspection.di.ViewModelKey
 import cn.bloudidea.inspection.ui.*
 import cn.bloudidea.inspection.ui.contract.bid.BidSectionViewModel
 import cn.bloudidea.inspection.ui.contract.laborer.LaborerBillViewModel
+import cn.bloudidea.inspection.ui.contract.material.MaterialBillViewModel
 import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageViewModel
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillViewModel
 import cn.bloudidea.inspection.ui.home.HomeViewModel
@@ -103,10 +104,15 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(LaborerBillViewModel::class)
-    abstract fun bindLaborerBillViewModel(viewModel:LaborerBillViewModel):ViewModel
+    abstract fun bindLaborerBillViewModel(viewModel: LaborerBillViewModel): ViewModel
 
     @Binds
     @IntoMap
     @ViewModelKey(ProvisionGoldManageViewModel::class)
-    abstract fun bindProvisionGoldManageViewModel(viewModel:ProvisionGoldManageViewModel):ViewModel
+    abstract fun bindProvisionGoldManageViewModel(viewModel: ProvisionGoldManageViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MaterialBillViewModel::class)
+    abstract fun bindMaterialBillViewModel(viewModel: MaterialBillViewModel): ViewModel
 }

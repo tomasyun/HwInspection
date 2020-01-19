@@ -4,10 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import cn.bloudidea.inspection.util.support.EasyStateView
+import kotlinx.android.synthetic.main.fragment_material_bill.*
+import javax.inject.Inject
 
 class MaterialBillFragment : BaseFragment() {
+    private val vm by lazy {
+        getViewModel(MaterialBillViewModel::class.java)
+    }
+    @Inject
+    lateinit var adapter: MaterialBillListAdapter
+    @Inject
+    lateinit var layoutManager: LinearLayoutManager
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,5 +30,11 @@ class MaterialBillFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        rvMaterialBill.layoutManager = layoutManager
+        rvMaterialBill.adapter = adapter
+        adapter.addItems(vm.data)
+        if (vm.data.isEmpty()) {
+            materialBillStateView.showViewState(EasyStateView.VIEW_EMPTY)
+        }
     }
 }

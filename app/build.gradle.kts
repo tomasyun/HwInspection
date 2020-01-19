@@ -116,6 +116,7 @@ dependencies {
 
     implementation("com.contrarywind:Android-PickerView:4.1.9")
     implementation("com.nineoldandroids:library:2.4.0")
+    implementation("com.melnykov:floatingactionbutton:1.3.0")
 
     // For debugging
     debugImplementation("com.facebook.flipper:flipper:0.23.2")

@@ -82,4 +82,19 @@
         <attr name="menu_fab_show_animation" format="reference" />
         <attr name="menu_fab_hide_animation" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="EasyStateView">
+        <attr name="esv_use_anim" format="boolean" />
+        <attr name="esv_loadingView" format="reference" />
+        <attr name="esv_errorDataView" format="reference" />
+        <attr name="esv_errorNetView" format="reference" />
+        <attr name="esv_emptyView" format="reference" />
+        <attr name="esv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="loading" value="-1" />
+            <enum name="error_data" value="-2" />
+            <enum name="error_net" value="-3" />
+            <enum name="empty" value="-4" />
+        </attr>
+    </declare-styleable>
 </resources>

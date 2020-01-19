@@ -20,7 +20,7 @@ class ProvisionGoldManageViewModel @Inject constructor() : BaseViewModel() {
             provisionGoldUnit = "元"
         )
 
-        for (i in 0 until 5) {
+        for (i in 0 until 15) {
             data.add(item)
         }
     }
