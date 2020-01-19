@@ -37,8 +37,8 @@ class HasReadFragment : BaseFragment() {
         if (vm.data.isEmpty()) {
             hasReadFragment.showViewState(EasyStateView.VIEW_EMPTY)
         } else {
+            hasReadFragment.showViewState(0)
             msgAdapter.addItems(vm.data)
-
         }
     }
 }

@@ -1,9 +1,10 @@
 package cn.bloudidea.inspection.di.component
 
-import android.app.Activity
+import cn.bloudidea.inspection.base.BaseActivity
 import cn.bloudidea.inspection.di.ActivityScope
 import cn.bloudidea.inspection.di.module.ActivityModule
 import cn.bloudidea.inspection.ui.*
+import cn.bloudidea.inspection.ui.save.SaveStepDistanceActivity
 import dagger.Subcomponent
 
 @ActivityScope
@@ -28,9 +29,10 @@ interface ActivityComponent {
     fun inject(activity: SettingActivity)
     fun inject(activity: LoginActivity)
     fun inject(activity: SplashActivity)
+    fun inject(activity: SaveStepDistanceActivity)
 }
 
-fun ActivityComponent.Builder.buildAndInject(activity: Activity) {
+fun ActivityComponent.Builder.buildAndInject(activity: BaseActivity) {
     val component = activityModule(ActivityModule(activity)).build()
 
     when (activity) {
@@ -42,5 +44,6 @@ fun ActivityComponent.Builder.buildAndInject(activity: Activity) {
         is SettingActivity -> component.inject(activity)
         is LoginActivity -> component.inject(activity)
         is SplashActivity -> component.inject(activity)
+        is SaveStepDistanceActivity -> component.inject(activity)
     }
 }

@@ -14,6 +14,7 @@ import cn.bloudidea.inspection.ui.StatisticsActivity
 import cn.bloudidea.inspection.ui.contract.ContractManagerActivity
 import cn.bloudidea.inspection.ui.labourer.LabourerManageActivity
 import cn.bloudidea.inspection.ui.rate.RateManageActivity
+import cn.bloudidea.inspection.ui.save.SaveStepDistanceActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -125,6 +126,10 @@ class HomeFragment : BaseFragment() {
                     LabourerManageActivity::class.java
                 )
             )
+        }
+
+        saveStepDistance.setOnClickListener {
+            startActivity(Intent(activity, SaveStepDistanceActivity::class.java))
         }
     }
 }

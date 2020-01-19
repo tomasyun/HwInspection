@@ -33,9 +33,9 @@
         android:id="@+id/tbLayoutMessage"
         style="@style/BottomTabStyle"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_gravity="top"
-        app:tabBackground="@color/bg_default"
+        app:tabBackground="@drawable/tab_selector"
         app:tabGravity="fill" />
 
     <View

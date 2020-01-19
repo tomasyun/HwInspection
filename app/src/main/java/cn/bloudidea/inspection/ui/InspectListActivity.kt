@@ -10,6 +10,7 @@ import android.widget.PopupWindow
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseActivity
+import cn.bloudidea.inspection.util.support.EasyStateView
 import kotlinx.android.synthetic.main.activity_inspect_list.*
 import kotlinx.android.synthetic.main.pop_menu.view.*
 import javax.inject.Inject
@@ -34,15 +35,27 @@ class InspectListActivity : BaseActivity() {
         when (intent.extras.get("skip")) {
             0 -> {
                 tvInspectListTitle.text = "日常巡检"
-                adapter.addItems(vm.daily)
+                if (vm.daily.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    adapter.addItems(vm.daily)
+                }
             }
             1 -> {
                 tvInspectListTitle.text = "专项检查"
-                adapter.addItems(vm.expert)
+                if (vm.expert.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    adapter.addItems(vm.expert)
+                }
             }
             2 -> {
                 tvInspectListTitle.text = "施工自检"
-                adapter.addItems(vm.self)
+                if (vm.self.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    adapter.addItems(vm.self)
+                }
             }
         }
         ivInspectListBack.setOnClickListener { this.finish() }
@@ -72,79 +85,108 @@ class InspectListActivity : BaseActivity() {
             it.checking.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "检查中") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "检查中") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.auditing.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "审核中") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "审核中") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.rectifying.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "整改中") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "整改中") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.reviewing.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "复检中") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "复检中") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.receiving.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "验收中") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "验收中") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.finish.setOnClickListener {
                 pop.dismiss()
                 newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "已完成") {
-                        newData.add(value)
+                for (item in vm.daily) {
+                    if (item.status == "已完成") {
+                        newData.add(item)
                     }
                 }
-                adapter.addItems(newData)
-                adapter.notifyDataSetChanged()
+                if (newData.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(newData)
+                    adapter.notifyDataSetChanged()
+                }
             }
             it.all.setOnClickListener {
                 pop.dismiss()
-                newData.clear()
-                for (value in vm.daily) {
-                    if (value.status == "全部") {
-
-                    }
+                if (vm.daily.isEmpty()) {
+                    inspectListStateView.showViewState(EasyStateView.VIEW_EMPTY)
+                } else {
+                    inspectListStateView.showViewState(0)
+                    adapter.addItems(vm.daily)
+                    adapter.notifyDataSetChanged()
                 }
-                adapter.addItems(vm.daily)
-                adapter.notifyDataSetChanged()
             }
         }
         pop.contentView = view

@@ -37,6 +37,7 @@ class UnReadFragment : BaseFragment() {
         if (vm.data.isEmpty()) {
             unReadStateView.showViewState(EasyStateView.VIEW_EMPTY)
         } else {
+            unReadStateView.showViewState(0)
             msgAdapter.addItems(vm.data)
         }
     }
