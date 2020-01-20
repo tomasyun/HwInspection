@@ -9,6 +9,7 @@ import cn.bloudidea.inspection.ui.contract.material.MaterialBillListAdapter
 import cn.bloudidea.inspection.ui.contract.provisional.ProvisionGoldManageListAdapter
 import cn.bloudidea.inspection.ui.contract.quantity.QuantityBillListAdapter
 import cn.bloudidea.inspection.ui.cost.CostAlterManageViewPagerAdapter
+import cn.bloudidea.inspection.ui.cost.MeterageManageViewPagerAdapter
 import cn.bloudidea.inspection.ui.labourer.employee.EmployeeManageViewPagerAdapter
 import cn.bloudidea.inspection.ui.labourer.salary.EmploySalaryViewPagerAdapter
 import cn.bloudidea.inspection.ui.message.MessageListAdapter
@@ -69,4 +70,8 @@ class FragmentModule(private val fragment: Fragment) {
     @Provides
     fun provideCostAlterManageViewPagerAdapter(): CostAlterManageViewPagerAdapter =
         CostAlterManageViewPagerAdapter(fragment.childFragmentManager)
+
+    @Provides
+    fun provideMeterageManageViewPagerAdapter(): MeterageManageViewPagerAdapter =
+        MeterageManageViewPagerAdapter(fragment.childFragmentManager)
 }

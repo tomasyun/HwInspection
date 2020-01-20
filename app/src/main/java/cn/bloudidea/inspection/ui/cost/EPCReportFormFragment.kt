@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
+import cn.bloudidea.inspection.util.support.EasyStateView
+import kotlinx.android.synthetic.main.fragment_epc_report_form.*
 
 class EPCReportFormFragment : BaseFragment() {
     override fun onCreateView(
@@ -12,10 +15,11 @@ class EPCReportFormFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return inflater.inflate(R.layout.fragment_epc_report_form, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        epcReportFormStateView.showViewState(EasyStateView.VIEW_EMPTY)
     }
 }
