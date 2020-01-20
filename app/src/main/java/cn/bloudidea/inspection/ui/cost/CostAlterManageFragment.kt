@@ -39,9 +39,7 @@ class CostAlterManageFragment : BaseFragment() {
         vpCostAlterManage.currentItem = 0;
         vpCostAlterManage.offscreenPageLimit = tbCostAlterManage.tabCount
         vpCostAlterManage.addOnPageChangeListener(
-            TabLayout.TabLayoutOnPageChangeListener(
-                tbCostAlterManage
-            )
+            TabLayout.TabLayoutOnPageChangeListener(tbCostAlterManage)
         )
         tbCostAlterManage.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
