@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cost_navigation_graph"
+    app:startDestination="@id/costDataBoard">
+
+    <fragment
+        android:id="@+id/costDataBoard"
+        android:name="cn.bloudidea.inspection.ui.cost.CostDataBoardFragment"
+        android:label="fragment_cost_data_board"
+        tools:layout="@layout/fragment_cost_data_board" />
+
+    <fragment
+        android:id="@+id/costAlterManage"
+        android:name="cn.bloudidea.inspection.ui.cost.CostAlterManageFragment"
+        android:label="fragment_cost_alter_manage"
+        tools:layout="@layout/fragment_cost_alter_manage" />
+
+    <fragment
+        android:id="@+id/meterageManage"
+        android:name="cn.bloudidea.inspection.ui.cost.MeterageManageFragment"
+        android:label="fragment_meterage_manage"
+        tools:layout="@layout/fragment_meterage_manage" />
+</navigation>

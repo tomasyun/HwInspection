@@ -12,6 +12,7 @@ import cn.bloudidea.inspection.ui.AcceptanceActivity
 import cn.bloudidea.inspection.ui.InspectListActivity
 import cn.bloudidea.inspection.ui.StatisticsActivity
 import cn.bloudidea.inspection.ui.contract.ContractManagerActivity
+import cn.bloudidea.inspection.ui.cost.CostManageActivity
 import cn.bloudidea.inspection.ui.labourer.LabourerManageActivity
 import cn.bloudidea.inspection.ui.rate.RateManageActivity
 import cn.bloudidea.inspection.ui.save.SaveStepDistanceActivity
@@ -130,6 +131,15 @@ class HomeFragment : BaseFragment() {
 
         saveStepDistance.setOnClickListener {
             startActivity(Intent(activity, SaveStepDistanceActivity::class.java))
+        }
+
+        costManage.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity,
+                    CostManageActivity::class.java
+                )
+            )
         }
     }
 }
