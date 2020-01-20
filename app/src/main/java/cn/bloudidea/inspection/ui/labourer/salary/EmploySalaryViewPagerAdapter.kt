@@ -7,6 +7,7 @@ import javax.inject.Inject
 
 class EmploySalaryViewPagerAdapter @Inject constructor(fragmentManager: FragmentManager) :
     FragmentStatePagerAdapter(fragmentManager) {
+    
     private var index: Int = 0
     override fun getItem(position: Int): Fragment = when (position) {
         0 -> SalaryDetailFragment()
