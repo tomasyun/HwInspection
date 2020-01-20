@@ -10,8 +10,10 @@
     app:esv_use_anim="true"
     tools:context=".ui.save.SaveStepDistanceActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <cn.bloudidea.inspection.util.X5WebView
+        android:id="@+id/monitorView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
 
 </cn.bloudidea.inspection.util.support.EasyStateView>
