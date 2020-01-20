@@ -7,35 +7,53 @@
     android:background="#f5f5f5"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tbStatistics"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/MenuTextStyle">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/ivStatisticsBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@null"
-            android:paddingRight="5dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/ic_back_arrow" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/MenuTextStyle">
 
-        <TextView
-            android:id="@+id/tvStatisticsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text=""
-            android:textColor="@color/bg_default"
-            android:textSize="18sp"
-            tools:text="检查统计" />
+            <ImageView
+                android:id="@+id/ivStatisticsBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:paddingRight="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_back_arrow" />
 
-    </androidx.appcompat.widget.Toolbar>
+            <TextView
+                android:id="@+id/tvStatisticsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/bg_default"
+                android:textSize="18sp"
+                tools:text="检查统计" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <cn.bloudidea.inspection.util.support.EasyStateView
+            android:id="@+id/statisticStateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_default"
+            app:esv_emptyView="@layout/state_empty"
+            app:esv_use_anim="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </cn.bloudidea.inspection.util.support.EasyStateView>
+    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

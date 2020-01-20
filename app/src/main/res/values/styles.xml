@@ -49,7 +49,6 @@
         <item name="tabTextAppearance">@style/AppTab.TextAppearance</item>
         <item name="tabSelectedTextColor">@color/bg_default</item>
         <item name="tabTextColor">#000000</item>
-        <item name="tabIndicatorHeight">2dp</item>
     </style>
 
     <style name="AppTab.TextAppearance" parent="TextAppearance.Design.Tab">

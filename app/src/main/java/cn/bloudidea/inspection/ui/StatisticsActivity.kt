@@ -3,6 +3,7 @@ package cn.bloudidea.inspection.ui
 import android.os.Bundle
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseActivity
+import cn.bloudidea.inspection.util.support.EasyStateView
 import kotlinx.android.synthetic.main.activity_statistics.*
 
 class StatisticsActivity : BaseActivity() {
@@ -13,5 +14,7 @@ class StatisticsActivity : BaseActivity() {
         supportActionBar?.title = ""
         tvStatisticsTitle.text = "检查统计"
         ivStatisticsBack.setOnClickListener { finish() }
+
+        statisticStateView.showViewState(EasyStateView.VIEW_EMPTY)
     }
 }

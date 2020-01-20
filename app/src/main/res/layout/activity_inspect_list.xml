@@ -79,12 +79,12 @@
                     android:layout_marginStart="10dp"
                     android:background="@drawable/hw_small_corner_red_bg"
                     android:paddingLeft="10dp"
-                    android:paddingTop="5dp"
+                    android:paddingTop="3dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="3dp"
                     android:text="搜索"
                     android:textColor="@color/bg_default"
-                    android:textSize="13sp" />
+                    android:textSize="14sp" />
             </RelativeLayout>
 
             <cn.bloudidea.inspection.util.support.EasyStateView
