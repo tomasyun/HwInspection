@@ -144,7 +144,6 @@ class AddInspectActivity : BaseActivity() {
                 1 -> tvOrganizationValue.text = data?.extras?.getString("value")
                 2 -> tvTypeValue.text = data?.extras?.getString("value")
                 3 -> tvNoticeUserValue.text = data?.extras?.getString("value")
-
             }
         }
     }

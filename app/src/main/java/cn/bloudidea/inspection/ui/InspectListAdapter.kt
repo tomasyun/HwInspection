@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import cn.bloudidea.inspection.R
 
-class InspectListAdapter(
+class InspectListAdapter constructor(
     private val context: Context,
     private val data: MutableList<InspectListItem>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

@@ -5,5 +5,4 @@ interface PrefsHelper {
     fun getIsLogin(): Boolean
 
     fun setIsLogin(isLogin: Boolean)
-
 }

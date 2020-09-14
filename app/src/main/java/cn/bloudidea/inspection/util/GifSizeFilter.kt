@@ -41,5 +41,4 @@ internal class GifSizeFilter(
             )
         } else null
     }
-
 }

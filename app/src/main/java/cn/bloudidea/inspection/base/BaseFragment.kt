@@ -35,21 +35,10 @@ abstract class BaseFragment : Fragment() {
     fun <T : ViewModel> getViewModel(modelClass: Class<T>) =
         getViewModelProvider(this).get(modelClass)
 
-    fun getViewModelProvider(fragment: Fragment) =
-        ViewModelProviders.of(
-            fragment,
-            (requireActivity().application as InspectionApplication).viewModelFactory
-        )
+    private fun getViewModelProvider(fragment: Fragment) = ViewModelProviders.of(fragment, (requireActivity().application as InspectionApplication).viewModelFactory)
 
-    fun getViewModelProvider(activity: FragmentActivity) =
-        ViewModelProviders.of(
-            activity,
-            (requireActivity().application as InspectionApplication).viewModelFactory
-        )
+    fun getViewModelProvider(activity: FragmentActivity) = ViewModelProviders.of(activity, (requireActivity().application as InspectionApplication).viewModelFactory)
 
-    /**
-     * Modified from https://github.com/uber/AutoDispose
-     */
     @CheckReturnValue
     fun <T> Flowable<T>.autoDisposable(): FlowableSubscribeProxy<T> =
         this.`as`(AutoDispose.autoDisposable(scopeProvider))
