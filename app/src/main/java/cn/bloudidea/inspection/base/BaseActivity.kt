@@ -1,6 +1,7 @@
 package cn.bloudidea.inspection.base
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import cn.bloudidea.inspection.InspectionApplication
 import cn.bloudidea.inspection.di.component.buildAndInject
 import com.evernote.android.state.StateSaver
+import com.gyf.barlibrary.ImmersionBar
 import com.uber.autodispose.*
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
@@ -25,6 +27,17 @@ abstract class BaseActivity : AppCompatActivity() {
             .newActivityComponentBuilder().buildAndInject(this)
         super.onCreate(savedInstanceState)
         StateSaver.restoreInstanceState(this, savedInstanceState)
+        ImmersionBar.with(this).init();
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ImmersionBar.with(this).destroy();
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        ImmersionBar.with(this).init();
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

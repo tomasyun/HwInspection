@@ -1,66 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="55dp"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment">
+    android:background="#F1F1F1">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarHome"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="200dp">
 
-        <TextView
-            android:id="@+id/tvHomeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text=""
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <!--    <ImageView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="200dp"-->
-    <!--        android:contentDescription="@null"-->
-    <!--        android:scaleType="fitXY"-->
-    <!--        android:src="@mipmap/ic_image_pick_no_media" />-->
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
-
-        <LinearLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!--轮播图片-->
             <cn.bingoogolapple.bgabanner.BGABanner
                 android:id="@+id/bannerHome"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 app:banner_pageChangeDuration="1000"
                 app:banner_pointAutoPlayAble="true"
                 app:banner_pointContainerBackground="@android:color/transparent"
                 app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
                 app:banner_pointTopBottomMargin="15dp"
                 app:banner_transitionEffect="alpha" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/hype_white"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="20dp"
+                    android:background="@color/hype_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="全部应用"
+                    android:textColor="#3C5A98"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RelativeLayout
@@ -274,7 +281,7 @@
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@null"
                         android:scaleType="fitXY"
-                        android:src="@mipmap/ic_acceptance" />
+                        android:src="@mipmap/ic_progress" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -304,7 +311,7 @@
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@null"
                         android:scaleType="fitXY"
-                        android:src="@mipmap/ic_acceptance" />
+                        android:src="@mipmap/ic_labour" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -335,7 +342,7 @@
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@null"
                         android:scaleType="fitXY"
-                        android:src="@mipmap/ic_daily" />
+                        android:src="@mipmap/ic_step" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -349,65 +356,6 @@
                 </RelativeLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal"
-                android:visibility="visible">
-
-                <RelativeLayout
-                    android:id="@+id/costManage"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp">
-
-                    <ImageView
-                        android:id="@+id/ivCostManage"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:contentDescription="@null"
-                        android:scaleType="fitXY"
-                        android:src="@mipmap/ic_acceptance" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/ivCostManage"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="费用管理"
-                        android:textColor="#333333"
-                        android:textSize="14sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="1dp"
-                    android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp">
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="1dp"
-                    android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp">
-
-
-                </RelativeLayout>
-            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

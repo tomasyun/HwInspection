@@ -38,6 +38,7 @@
             android:id="@+id/ivAvatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
             android:src="@drawable/ic_account_circle_green_24dp" />
@@ -46,24 +47,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/ivAvatar"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/ivAvatar"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="工程部"
                 android:textColor="#333333"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
                 android:text="张善"
                 android:textColor="#333333"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -82,7 +86,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_http_black_24dp" />
+            android:src="@mipmap/ic_setup" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -119,7 +123,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_vpn_key_black_24dp" />
+            android:src="@mipmap/ic_pwd" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -156,7 +160,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_settings_black_24dp" />
+            android:src="@mipmap/ic_setting" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -193,7 +197,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_file_download_black_24dp" />
+            android:src="@mipmap/ic_update" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -230,7 +234,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_new_releases_black_24dp" />
+            android:src="@mipmap/ic_unregister" />
 
         <TextView
             android:layout_width="wrap_content"

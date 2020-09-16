@@ -7,6 +7,7 @@ import android.os.Looper
 import android.os.Message
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseActivity
+import com.gyf.barlibrary.ImmersionBar
 
 class SplashActivity : BaseActivity() {
 
@@ -18,6 +19,10 @@ class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        ImmersionBar.with(this)
+            .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+            .statusBarColor(R.color.black)
+            .init();
         if (vm.isLogin()) {
             handler.sendEmptyMessageDelayed(0, 3000)
         } else {
@@ -39,5 +44,9 @@ class SplashActivity : BaseActivity() {
                 }
             }
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        ImmersionBar.with(this).destroy();
     }
 }

@@ -118,6 +118,8 @@ dependencies {
     implementation("com.nineoldandroids:library:2.4.0")
     implementation("com.melnykov:floatingactionbutton:1.3.0")
 
+    implementation("com.gyf.immersionbar:immersionbar:2.3.3")
+
     // For debugging
     debugImplementation("com.facebook.flipper:flipper:0.23.2")
     debugImplementation("com.facebook.soloader:soloader:0.8.0")

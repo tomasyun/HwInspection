@@ -11,6 +11,7 @@ import cn.bloudidea.inspection.ui.DisposeProxyActivity
 import cn.bloudidea.inspection.ui.RevisePasswordActivity
 import cn.bloudidea.inspection.ui.SplashActivity
 import cn.bloudidea.inspection.util.ToastUtils
+import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.fragment_mine.*
 import org.jetbrains.anko.support.v4.alert
 
@@ -30,7 +31,10 @@ class MineFragment : BaseFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        ImmersionBar.with(this)
+            .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+            .statusBarColor(R.color.colorPrimary)
+            .init();
         tvMineTitle.text = "我的"
         relRevisePassword.setOnClickListener(this)
         relSetUp.setOnClickListener(this)
@@ -70,5 +74,10 @@ class MineFragment : BaseFragment(), View.OnClickListener {
 
             }
         }.show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ImmersionBar.with(this).destroy();
     }
 }

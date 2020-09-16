@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
 import com.google.android.material.tabs.TabLayout
+import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.fragment_message.*
 import javax.inject.Inject
 
@@ -29,6 +30,10 @@ class MessageFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        ImmersionBar.with(this)
+            .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+            .statusBarColor(R.color.colorPrimary)
+            .init();
         tvMessageTitle.text = "消息"
         tabs = ArrayList()
         tabs.add(tbLayoutMessage.newTab().setText("未读"))
@@ -54,5 +59,10 @@ class MessageFragment : BaseFragment() {
 //                pos = tab!!.position
             }
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ImmersionBar.with(this).destroy();
     }
 }

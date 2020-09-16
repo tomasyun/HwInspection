@@ -16,6 +16,7 @@ import cn.bloudidea.inspection.ui.cost.CostManageActivity
 import cn.bloudidea.inspection.ui.labourer.LabourerManageActivity
 import cn.bloudidea.inspection.ui.rate.RateManageActivity
 import cn.bloudidea.inspection.ui.save.SaveStepDistanceActivity
+import com.gyf.barlibrary.ImmersionBar
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -34,7 +35,8 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvHomeTitle.text = "首页"
+//        tvHomeTitle.text = "首页"
+        ImmersionBar.with(this).init();
         bannerHome.setAdapter { _, itemView, model, _ ->
             if (model is Int && itemView is ImageView) {
                 Picasso.get().load(model).placeholder(R.mipmap.ic_image_pick_no_media)
@@ -132,14 +134,10 @@ class HomeFragment : BaseFragment() {
         saveStepDistance.setOnClickListener {
             startActivity(Intent(activity, SaveStepDistanceActivity::class.java))
         }
+    }
 
-        costManage.setOnClickListener {
-            startActivity(
-                Intent(
-                    activity,
-                    CostManageActivity::class.java
-                )
-            )
-        }
+    override fun onDestroy() {
+        super.onDestroy()
+        ImmersionBar.with(this).destroy();
     }
 }

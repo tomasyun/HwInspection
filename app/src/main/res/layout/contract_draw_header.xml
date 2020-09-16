@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:contentDescription="@null"
-        android:scaleType="fitXY"
-        android:src="@mipmap/app_logo" />
+        android:scaleType="fitXY" />
 
     <TextView
         android:layout_width="match_parent"

@@ -42,7 +42,7 @@
         android:id="@+id/tvSelectContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/hw_small_corner_green_stroke_white_bg"
+        android:background="@drawable/hw_bigger_corner_blue_bg"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="20dp"
