@@ -50,7 +50,7 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="3dp"
                 android:text="查询"
-                android:textColor="@color/bg_default"
+                android:textColor="@color/white"
                 android:textSize="14sp" />
         </RelativeLayout>
 

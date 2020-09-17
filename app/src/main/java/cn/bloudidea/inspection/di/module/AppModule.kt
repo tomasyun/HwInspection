@@ -52,5 +52,4 @@ class AppModule(private val app: Application) {
     @Provides
     @Singleton
     internal fun provideDbHelp(helper: AppDbHelper): DbHelper = helper
-
 }

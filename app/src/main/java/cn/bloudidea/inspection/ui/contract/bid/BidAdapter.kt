@@ -25,7 +25,7 @@ class BidAdapter(private val context: FragmentActivity, private val bids: Mutabl
             if (this.position == position) {
                 holder.bidNo.backgroundColor = context.resources.getColor(R.color.colorPrimary)
             } else {
-                holder.bidNo.backgroundColor = context.resources.getColor(R.color.bg_default)
+                holder.bidNo.backgroundColor = context.resources.getColor(R.color.white)
             }
         }
 

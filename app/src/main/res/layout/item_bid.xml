@@ -3,7 +3,7 @@
     android:id="@+id/bidNo"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg_default"
+    android:background="@color/white"
     android:gravity="center"
     android:paddingTop="15dp"
     android:paddingBottom="15dp"

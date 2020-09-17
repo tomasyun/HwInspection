@@ -7,7 +7,7 @@ import cn.bloudidea.inspection.di.component.AppComponent
 import cn.bloudidea.inspection.di.component.DaggerAppComponent
 import cn.bloudidea.inspection.di.module.AppModule
 import cn.bloudidea.inspection.di.module.FlipperModule
-import com.facebook.flipper.core.FlipperClient
+//import com.facebook.flipper.core.FlipperClient
 import com.google.gson.GsonBuilder
 import com.tencent.smtt.sdk.QbSdk
 import io.github.inflationx.calligraphy3.CalligraphyConfig
@@ -19,8 +19,8 @@ import javax.inject.Inject
 
 open class InspectionApplication : Application() {
     lateinit var component: AppComponent
-    @Inject
-    lateinit var flipperClient: FlipperClient
+//    @Inject
+//    lateinit var flipperClient: FlipperClient
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
@@ -33,7 +33,7 @@ open class InspectionApplication : Application() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
-        flipperClient.start()
+//        flipperClient.start()
 
         ViewPump.init(
             ViewPump.builder().addInterceptor(
@@ -64,7 +64,7 @@ open class InspectionApplication : Application() {
 
         return DaggerAppComponent.builder()
             .appModule(AppModule(this))
-            .flipperModule(FlipperModule(this, httpClientBuilder))
+//            .flipperModule(FlipperModule(this, httpClientBuilder))
             .apiModule(ApiModule(httpClientBuilder, gsonBuilder))
             .build()
     }

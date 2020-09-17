@@ -63,11 +63,6 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(DisposeProxyViewModel::class)
-    abstract fun bindDisposeProxyViewModel(viewModel: DisposeProxyViewModel): ViewModel
-
-    @Binds
-    @IntoMap
     @ViewModelKey(SettingViewModel::class)
     abstract fun bindSettingViewModel(viewModel: SettingViewModel): ViewModel
 

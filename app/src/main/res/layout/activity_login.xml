@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/hype_white"
-    tools:ignore="MissingPrefix"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="高速公路智慧云平台"
-            android:textColor="@color/hype_white"
+            android:textColor="@color/white"
             android:textSize="23sp" />
     </FrameLayout>
 
@@ -44,6 +44,7 @@
             android:textSize="15sp" />
 
         <EditText
+            android:id="@+id/etAccount"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="5dp"
@@ -59,14 +60,15 @@
             android:background="#BFBFBF" />
 
         <TextView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="账号"
             android:textColor="#323232"
             android:textSize="15sp" />
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="5dp"
@@ -82,25 +84,26 @@
             android:background="#BFBFBF" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
+            android:layout_marginTop="15dp"
+            android:button="@mipmap/ic_check"
             android:checked="true"
+            android:clickable="true"
             android:paddingLeft="10dp"
             android:text="记住密码"
             android:textColor="#323232"
-            android:textSize="15sp"
-            android:button="@mipmap/ic_check"/>
+            android:textSize="15sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_marginTop="50dp"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/hw_bigger_corner_blue_bg"
             android:text="登 录"
+            android:textColor="@color/white"
             android:textSize="15sp"
-            android:textColor="@color/hype_white"
-            android:translationZ="9dp"
-            android:background="@drawable/hw_bigger_corner_blue_bg"/>
+            android:translationZ="9dp" />
     </LinearLayout>
 </LinearLayout>

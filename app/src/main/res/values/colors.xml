@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#3b5998</color>
     <color name="colorAccent">#3b5998</color>
 
-    <color name="bg_default">#ffffff</color>
-    <color name="bg_gray">#f5f5f5</color>
-    <color name="divider">#e4e4e4</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="grayer">#e4e4e4</color>
     <color name="black">#000000</color>
 
     <color name="fb">#2ea3fe</color>

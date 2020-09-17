@@ -7,11 +7,12 @@ import android.os.Looper
 import android.os.Message
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseActivity
+import cn.bloudidea.inspection.util.RxTimerUtils
 import com.gyf.barlibrary.ImmersionBar
+import io.reactivex.Observable
+import timber.log.Timber
 
 class SplashActivity : BaseActivity() {
-
-    //    var logined by Preference("logined", false)
     private val vm by lazy {
         getViewModel(SplashViewModel::class.java)
     }
@@ -20,31 +21,23 @@ class SplashActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         ImmersionBar.with(this)
-            .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+            .fitsSystemWindows(true)
             .statusBarColor(R.color.black)
-            .init();
+            .init()
+        Timber.i("登录状态为 %s", vm.isLogin())
         if (vm.isLogin()) {
-            handler.sendEmptyMessageDelayed(0, 3000)
+            RxTimerUtils.timer({
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                this@SplashActivity.finish()
+            }, 3000)
         } else {
-            handler.sendEmptyMessageDelayed(1, 3000)
+            RxTimerUtils.timer({
+                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+                this@SplashActivity.finish()
+            }, 3000)
         }
     }
 
-    private val handler: Handler = object : Handler(Looper.getMainLooper()) {
-        override fun handleMessage(msg: Message?) {
-            super.handleMessage(msg)
-            when (msg!!.what) {
-                0 -> {
-                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-                    this@SplashActivity.finish()
-                }
-                else -> {
-                    startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
-                    this@SplashActivity.finish()
-                }
-            }
-        }
-    }
     override fun onDestroy() {
         super.onDestroy()
         ImmersionBar.with(this).destroy();

@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="文件预览"
-            android:textColor="@color/bg_default"
+            android:textColor="@color/white"
             android:textSize="18sp"
             tools:text="文件预览" />
 

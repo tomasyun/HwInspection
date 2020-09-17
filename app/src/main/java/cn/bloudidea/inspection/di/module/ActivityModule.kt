@@ -24,5 +24,4 @@ class ActivityModule(private val activity: BaseActivity) {
     @Provides
     fun provideSaveStepDistanceViewPagerAdapter(): SaveStepDistanceViewPagerAdapter =
         SaveStepDistanceViewPagerAdapter(activity.supportFragmentManager)
-
 }

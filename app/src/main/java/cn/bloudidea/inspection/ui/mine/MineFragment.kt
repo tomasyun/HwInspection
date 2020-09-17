@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import cn.bloudidea.inspection.R
 import cn.bloudidea.inspection.base.BaseFragment
-import cn.bloudidea.inspection.ui.DisposeProxyActivity
 import cn.bloudidea.inspection.ui.RevisePasswordActivity
 import cn.bloudidea.inspection.ui.SplashActivity
 import cn.bloudidea.inspection.util.ToastUtils
@@ -16,7 +15,6 @@ import kotlinx.android.synthetic.main.fragment_mine.*
 import org.jetbrains.anko.support.v4.alert
 
 class MineFragment : BaseFragment(), View.OnClickListener {
-    //    private var logined by Preference("logined", false)
     private val vm by lazy {
         getViewModel(MineViewModel::class.java)
     }
@@ -45,7 +43,6 @@ class MineFragment : BaseFragment(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.relSetUp -> startActivity(Intent(activity, DisposeProxyActivity::class.java))
             R.id.relRevisePassword -> startActivity(
                 Intent(
                     activity,
@@ -54,7 +51,6 @@ class MineFragment : BaseFragment(), View.OnClickListener {
             )
             R.id.relSetting -> {
                 ToastUtils.instance()?.showToast(activity!!, "暂未开放")
-//                startActivity(Intent(activity, SettingActivity::class.java))
             }
             R.id.relUpgrade -> ToastUtils.instance()?.showToast(activity!!, "当前最新版本")
             R.id.relLogOut -> logout()
@@ -67,7 +63,6 @@ class MineFragment : BaseFragment(), View.OnClickListener {
             positiveButton("确定") {
                 startActivity(Intent(activity, SplashActivity::class.java))
                 activity?.finish()
-//                logined = false
                 vm.isLogin()
             }
             negativeButton("取消") {

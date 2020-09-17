@@ -23,36 +23,27 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    testImplementation("junit:junit:4.12")
-
     // Kotlin
     implementation(kotlin("stdlib-jdk8", KotlinCompilerVersion.VERSION))
 
     // Network
     api("com.squareup.okhttp3:okhttp:4.2.2")
-    api("com.google.code.gson:gson:2.8.5")
+    api("com.google.code.gson:gson:2.8.6")
     api("com.squareup.retrofit2:retrofit:2.6.2")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
     implementation("com.squareup.retrofit2:adapter-rxjava2:2.6.2")
     testImplementation("com.squareup.okhttp3:logging-interceptor:4.2.2")
-
-    // ReactiveX
     api("io.reactivex.rxjava2:rxkotlin:2.3.0")
     api("io.reactivex.rxjava2:rxandroid:2.1.1")
-
-    // Dependency injection
-    implementation("com.google.dagger:dagger:2.24")
-    kapt("com.google.dagger:dagger-compiler:2.24")
-    kaptTest("com.google.dagger:dagger-compiler:2.24")
-
-    // Testing
-    testImplementation(kotlin("test-junit", KotlinCompilerVersion.VERSION))
-}
-
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).all {
-    kotlinOptions.jvmTarget = "1.8"
+    implementation("com.google.dagger:dagger:2.28")
+    kapt("com.google.dagger:dagger-compiler:2.25.2")
+    kaptTest("com.google.dagger:dagger-compiler:2.25.2")
 }

@@ -31,7 +31,7 @@ class ToastUtils private constructor() {
         if (TextUtils.isEmpty(msg)) {
             return
         }
-        showToastCustom(ctx, msg, R.layout.toast, R.id.txt_toast_message, R.color.bg_default)
+        showToastCustom(ctx, msg, R.layout.toast, R.id.txt_toast_message, R.color.white)
     }
 
     fun showToastCenter(ctx: Context, resId: Int) {

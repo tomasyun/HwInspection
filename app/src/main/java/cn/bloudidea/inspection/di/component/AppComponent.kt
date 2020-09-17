@@ -14,16 +14,13 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AppModule::class,
-        FlipperModule::class,
+//        FlipperModule::class,
         ApiModule::class,
         ViewModelModule::class
     ]
 )
 interface AppComponent {
-
     fun inject(app: InspectionApplication)
-
     fun newActivityComponentBuilder(): ActivityComponent.Builder
-
     fun newFragmentComponentBuilder(): FragmentComponent.Builder
 }

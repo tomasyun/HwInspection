@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:windowBackground">@color/bg_default</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimary</item>
@@ -11,7 +11,7 @@
         <item name="windowNoTitle">true</item>
         <!-- 加入toolbar溢出【弹出】菜单的风格 -->
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
-        <item name="android:colorControlNormal">@color/bg_default</item>
+        <item name="android:colorControlNormal">@color/white</item>
     </style>
 
     <!--溢出[弹出]菜单样式 parent相当于继承【可以不要parent】-->
@@ -39,7 +39,7 @@
 
     <!-- 分隔线 -->
     <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
-        <item name="android:divider">@color/bg_default</item>
+        <item name="android:divider">@color/white</item>
         <item name="android:dividerHeight">1dp</item>
     </style>
 

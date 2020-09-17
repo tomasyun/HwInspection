@@ -5,7 +5,7 @@
     android:id="@+id/materialBillStateView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_default"
+    android:background="@color/white"
     app:esv_emptyView="@layout/state_empty"
     app:esv_use_anim="true"
     tools:context=".ui.contract.ContractManagerActivity">

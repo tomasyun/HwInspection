@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text=""
-            android:textColor="@color/bg_default"
+            android:textColor="@color/white"
             android:textSize="18sp"
             tools:text="资源配置" />
     </androidx.appcompat.widget.Toolbar>
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@color/bg_default"
+            android:background="@color/white"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="10dp"
@@ -78,7 +78,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bg_default"
+            android:background="@color/white"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="10dp"
@@ -106,7 +106,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bg_default"
+            android:background="@color/white"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="10dp"
@@ -143,7 +143,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:text="配置"
-        android:textColor="@color/bg_default"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

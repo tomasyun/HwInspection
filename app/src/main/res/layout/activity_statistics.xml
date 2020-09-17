@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text=""
-                android:textColor="@color/bg_default"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 tools:text="检查统计" />
 
@@ -46,7 +46,7 @@
             android:id="@+id/statisticStateView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/bg_default"
+            android:background="@color/white"
             app:esv_emptyView="@layout/state_empty"
             app:esv_use_anim="true">
 

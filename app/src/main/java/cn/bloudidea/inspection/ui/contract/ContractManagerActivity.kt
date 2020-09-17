@@ -51,7 +51,7 @@ class ContractManagerActivity : BaseActivity() {
         });
 
         val drawable = DrawerArrowDrawable(this);
-        drawable.color = resources.getColor(R.color.bg_default)
+        drawable.color = resources.getColor(R.color.white)
         val mDrawerToggle = ActionBarDrawerToggle(
             this,
             contractManageDrawer,

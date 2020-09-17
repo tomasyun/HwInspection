@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text=""
-                android:textColor="@color/bg_default"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 tools:text="劳务管理" />
 
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/bg_default"
+        android:background="@color/white"
         app:headerLayout="@layout/contract_draw_header"
         app:itemIconPadding="20dp"
         app:itemIconTint="@color/black"

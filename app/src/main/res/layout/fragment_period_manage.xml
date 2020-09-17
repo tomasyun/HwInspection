@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/periodManageStateView"
-    android:background="@color/bg_default"
+    android:background="@color/white"
     app:esv_emptyView="@layout/state_empty"
     tools:context=".ui.contract.ContractManagerActivity">
 

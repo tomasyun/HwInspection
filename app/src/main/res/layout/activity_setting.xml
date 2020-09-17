@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text=""
-            android:textColor="@color/bg_default"
+            android:textColor="@color/white"
             android:textSize="18sp"
             tools:text="设置" />
     </androidx.appcompat.widget.Toolbar>
