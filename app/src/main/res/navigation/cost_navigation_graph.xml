@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/costDataBoard"
-        android:name="cn.bloudidea.inspection.ui.cost.CostDataBoardFragment"
+        android:name="cn.yhsoft.highway.ui.cost.CostDataBoardFragment"
         android:label="fragment_cost_data_board"
         tools:layout="@layout/fragment_cost_data_board" />
 
     <fragment
         android:id="@+id/costAlterManage"
-        android:name="cn.bloudidea.inspection.ui.cost.CostAlterManageFragment"
+        android:name="cn.yhsoft.highway.ui.cost.CostAlterManageFragment"
         android:label="fragment_cost_alter_manage"
         tools:layout="@layout/fragment_cost_alter_manage" />
 
     <fragment
         android:id="@+id/meterageManage"
-        android:name="cn.bloudidea.inspection.ui.cost.MeterageManageFragment"
+        android:name="cn.yhsoft.highway.ui.cost.MeterageManageFragment"
         android:label="fragment_meterage_manage"
         tools:layout="@layout/fragment_meterage_manage" />
 </navigation>

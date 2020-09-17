@@ -40,7 +40,7 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <cn.bloudidea.inspection.util.support.EasyStateView
+        <com.yinghuo.highway.util.support.EasyStateView
             android:id="@+id/acceptanceStateView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,7 +51,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </cn.bloudidea.inspection.util.support.EasyStateView>
+        </com.yinghuo.highway.util.support.EasyStateView>
     </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

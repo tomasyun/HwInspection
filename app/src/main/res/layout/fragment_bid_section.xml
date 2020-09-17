@@ -332,7 +332,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <cn.bloudidea.inspection.util.support.FloatingActionMenu
+    <com.yinghuo.highway.util.support.FloatingActionMenu
         android:id="@+id/menu_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -344,26 +344,26 @@
         app:menu_labels_ellipsize="end"
         app:menu_labels_singleLine="true">
 
-        <cn.bloudidea.inspection.util.support.FloatingActionButton
+        <com.yinghuo.highway.util.support.FloatingActionButton
             android:id="@+id/fab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_delete_forever_white_24dp"
             app:fab_size="mini" />
 
-        <cn.bloudidea.inspection.util.support.FloatingActionButton
+        <com.yinghuo.highway.util.support.FloatingActionButton
             android:id="@+id/fab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_edit"
             app:fab_size="mini" />
 
-        <cn.bloudidea.inspection.util.support.FloatingActionButton
+        <com.yinghuo.highway.util.support.FloatingActionButton
             android:id="@+id/fab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/fab_add"
             app:fab_size="mini" />
 
-    </cn.bloudidea.inspection.util.support.FloatingActionMenu>
+    </com.yinghuo.highway.util.support.FloatingActionMenu>
 </FrameLayout>

@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/imageRateBroad"
-        android:name="cn.bloudidea.inspection.ui.rate.image.ImageRateBoardFragment"
+        android:name="cn.yhsoft.highway.ui.rate.image.ImageRateBoardFragment"
         android:label="fragment_image_rate_manage"
         tools:layout="@layout/fragment_image_rate_manage" />
 
     <fragment
         android:id="@+id/bridgeRateBroad"
-        android:name="cn.bloudidea.inspection.ui.rate.bridge.BridgeRateBoardFragment"
+        android:name="cn.yhsoft.highway.ui.rate.bridge.BridgeRateBoardFragment"
         android:label="fragment_bridge_rate_manage"
         tools:layout="@layout/fragment_bridge_rate_manage" />
 
     <fragment
         android:id="@+id/tunnelRateBroad"
-        android:name="cn.bloudidea.inspection.ui.rate.tunnel.TunnelRateManageFragment"
+        android:name="cn.yhsoft.highway.ui.rate.tunnel.TunnelRateManageFragment"
         android:label="fragment_tunnel_rate_manage"
         tools:layout="@layout/fragment_tunnel_rate_manage" />
 
     <fragment
         android:id="@+id/bridgeImageRate"
-        android:name="cn.bloudidea.inspection.ui.rate.bridge.BridgeImageRateFragment"
+        android:name="cn.yhsoft.highway.ui.rate.bridge.BridgeImageRateFragment"
         android:label="fragment_bridge_image_rate"
         tools:layout="@layout/fragment_bridge_image_rate" />
 
     <fragment
         android:id="@+id/tunnelImageRate"
-        android:name="cn.bloudidea.inspection.ui.rate.tunnel.TunnelImageRateFragment"
+        android:name="cn.yhsoft.highway.ui.rate.tunnel.TunnelImageRateFragment"
         android:label="fragment_tunnel_image_rate"
         tools:layout="@layout/fragment_tunnel_image_rate" />
 </navigation>

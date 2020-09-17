@@ -87,7 +87,7 @@
                     android:textSize="14sp" />
             </RelativeLayout>
 
-            <cn.bloudidea.inspection.util.support.EasyStateView
+            <com.yinghuo.highway.util.support.EasyStateView
                 android:id="@+id/inspectListStateView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -99,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:listitem="@layout/item_inspect_list" />
-            </cn.bloudidea.inspection.util.support.EasyStateView>
+            </com.yinghuo.highway.util.support.EasyStateView>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

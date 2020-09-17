@@ -7,42 +7,42 @@
 
     <fragment
         android:id="@+id/employeeBaseData"
-        android:name="cn.bloudidea.inspection.ui.labourer.basedata.EmployeeBaseDataFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.basedata.EmployeeBaseDataFragment"
         android:label="fragment_employee_base_data"
         tools:layout="@layout/fragment_employee_base_data" />
 
     <fragment
         android:id="@+id/employeeDataSource"
-        android:name="cn.bloudidea.inspection.ui.labourer.datasource.EmployeeDataSourceFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.datasource.EmployeeDataSourceFragment"
         android:label="fragment_employee_data_source"
         tools:layout="@layout/fragment_employee_data_source" />
 
     <fragment
         android:id="@+id/employeeManage"
-        android:name="cn.bloudidea.inspection.ui.labourer.employee.EmployeeManageFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.employee.EmployeeManageFragment"
         android:label="fragment_employee_manage"
         tools:layout="@layout/fragment_employee_manage" />
 
     <fragment
         android:id="@+id/employeePeccancy"
-        android:name="cn.bloudidea.inspection.ui.labourer.peccancy.EmployeePeccancyFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.peccancy.EmployeePeccancyFragment"
         android:label="fragment_employee_peccancy"
         tools:layout="@layout/fragment_employee_peccancy" />
 
     <fragment
         android:id="@+id/employeeReportForm"
-        android:name="cn.bloudidea.inspection.ui.labourer.report.EmployeeReportFormFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.report.EmployeeReportFormFragment"
         android:label="fragment_employee_report_form"
         tools:layout="@layout/fragment_employee_report_form" />
 
     <fragment
         android:id="@+id/employeeSalary"
-        android:name="cn.bloudidea.inspection.ui.labourer.salary.EmployeeSalaryFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.salary.EmployeeSalaryFragment"
         android:label="fragment_empolyee_salary"
         tools:layout="@layout/fragment_empolyee_salary" />
     <fragment
         android:id="@+id/employeeTraining"
-        android:name="cn.bloudidea.inspection.ui.labourer.training.EmployeeTrainingFragment"
+        android:name="cn.yhsoft.highway.ui.labourer.training.EmployeeTrainingFragment"
         android:label="fragment_employee_traning"
         tools:layout="@layout/fragment_employee_training" />
 </navigation>

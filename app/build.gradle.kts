@@ -19,10 +19,10 @@ android {
     defaultConfig {
         targetSdkVersion(28)
         minSdkVersion(21)
-        applicationId = "cn.bloudidea.inspection"
+        applicationId = "com.yinghuo.highway"
         versionCode = 1
         versionName = "1.0"
-        val scheme = "inspection"
+        val scheme = "highway"
         buildConfigField("String", "SCHEME", "\"$scheme\"")
         manifestPlaceholders = mapOf(
             "APPLICATION_ID" to applicationId,

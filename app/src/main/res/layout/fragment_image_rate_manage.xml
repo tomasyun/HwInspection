@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <cn.bloudidea.inspection.util.X5WebView
+    <com.yinghuo.highway.util.X5WebView
         android:id="@+id/rateBoardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
-    </cn.bloudidea.inspection.util.X5WebView>
+    </com.yinghuo.highway.util.X5WebView>
 </LinearLayout>
