@@ -377,5 +377,4 @@ public class EasyStateView extends FrameLayout {
             out.writeInt(useAnim);
         }
     }
-
 }

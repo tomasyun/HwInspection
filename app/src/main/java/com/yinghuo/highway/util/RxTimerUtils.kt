@@ -13,17 +13,23 @@ class RxTimerUtils {
         /**
          * 执行定时任务
          */
-        fun timer(block: () -> Unit, milliseconds: Long) {
-            Observable.timer(milliseconds, TimeUnit.MILLISECONDS)
+        fun timer(block: (t: Long) -> Unit,complete: () -> Unit, interval: Long,total:Int) {
+            Observable.interval(interval, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : Observer<Long> {
                     override fun onError(e: Throwable) {}
                     override fun onComplete() {
+                        complete()
                         cancel()
                     }
 
                     override fun onNext(t: Long) {
-                        block()
+                        val count:Int=total-t.toInt();
+                        block(count.toLong());
+                        if (count==0){
+                            complete()
+                            cancel()
+                        }
                     }
 
                     override fun onSubscribe(d: Disposable) {

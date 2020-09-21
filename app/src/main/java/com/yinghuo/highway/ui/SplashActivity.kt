@@ -6,6 +6,8 @@ import com.gyf.barlibrary.ImmersionBar
 import com.yinghuo.highway.R
 import com.yinghuo.highway.base.BaseActivity
 import com.yinghuo.highway.util.RxTimerUtils
+import kotlinx.android.synthetic.main.activity_splash.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
 import timber.log.Timber
 
 class SplashActivity : BaseActivity() {
@@ -15,22 +17,35 @@ class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R .layout.activity_splash)
+        setContentView(R.layout.activity_splash)
         ImmersionBar.with(this)
             .fitsSystemWindows(true)
             .statusBarColor(R.color.black)
             .init()
         Timber.i("登录状态为 %s", vm.isLogin())
         if (vm.isLogin()) {
-            RxTimerUtils.timer({
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-                this@SplashActivity.finish()
-            }, 3000)
+            RxTimerUtils.timer(
+                { tvCountDNum.text = String.format("%s", it.toInt()) },
+                {
+                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    this@SplashActivity.finish()
+                }, 1, 5
+            )
         } else {
-            RxTimerUtils.timer({
+            RxTimerUtils.timer({ tvCountDNum.text = String.format("%s", it.toInt()) }, {
                 startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
                 this@SplashActivity.finish()
-            }, 3000)
+            }, 1, 5)
+        }
+        skipBtn.onClick {
+            RxTimerUtils.cancel()
+            if (vm.isLogin()) {
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                this@SplashActivity.finish()
+            } else {
+                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+                this@SplashActivity.finish()
+            }
         }
     }
 

@@ -7,55 +7,55 @@
 
     <fragment
         android:id="@+id/contractBoard"
-        android:name="cn.yhsoft.highway.ui.contract.board.ContractBoardFragment"
+        android:name="com.yinghuo.highway.ui.contract.board.ContractBoardFragment"
         android:label="fragment_contract_board"
         tools:layout="@layout/fragment_contract_board" />
 
     <fragment
         android:id="@+id/bidSection"
-        android:name="cn.yhsoft.highway.ui.contract.bid.BidSectionFragment"
+        android:name="com.yinghuo.highway.ui.contract.bid.BidSectionFragment"
         android:label="fragment_bid_section"
         tools:layout="@layout/fragment_bid_section" />
 
     <fragment
         android:id="@+id/quantityBill"
-        android:name="cn.yhsoft.highway.ui.contract.quantity.QuantityBillFragment"
+        android:name="com.yinghuo.highway.ui.contract.quantity.QuantityBillFragment"
         android:label="fragment_quantity_bill"
         tools:layout="@layout/fragment_quantity_bill" />
 
     <fragment
         android:id="@+id/laborerBill"
-        android:name="cn.yhsoft.highway.ui.contract.laborer.LaborerBillFragment"
+        android:name="com.yinghuo.highway.ui.contract.laborer.LaborerBillFragment"
         android:label="fragment_laborer_bill"
         tools:layout="@layout/fragment_laborer_bill" />
 
     <fragment
         android:id="@+id/materialBill"
-        android:name="cn.yhsoft.highway.ui.contract.material.MaterialBillFragment"
+        android:name="com.yinghuo.highway.ui.contract.material.MaterialBillFragment"
         android:label="fragment_material_bill"
         tools:layout="@layout/fragment_material_bill" />
 
     <fragment
         android:id="@+id/periodManage"
-        android:name="cn.yhsoft.highway.ui.contract.period.PeriodManageFragment"
+        android:name="com.yinghuo.highway.ui.contract.period.PeriodManageFragment"
         android:label="fragment_period_manage"
         tools:layout="@layout/fragment_period_manage" />
 
     <fragment
         android:id="@+id/planProportionManage"
-        android:name="cn.yhsoft.highway.ui.contract.proportion.PlanProportionManageFragment"
+        android:name="com.yinghuo.highway.ui.contract.proportion.PlanProportionManageFragment"
         android:label="fragment_plan_proportion_manage"
         tools:layout="@layout/fragment_plan_proportion_manage" />
 
     <fragment
         android:id="@+id/priceBill"
-        android:name="cn.yhsoft.highway.ui.contract.price.PriceBillFragment"
+        android:name="com.yinghuo.highway.ui.contract.price.PriceBillFragment"
         android:label="fragment_price_bill"
         tools:layout="@layout/fragment_price_bill" />
 
     <fragment
         android:id="@+id/provisionalGoldManage"
-        android:name="cn.yhsoft.highway.ui.contract.provisional.ProvisionalGoldManageFragment"
+        android:name="com.yinghuo.highway.ui.contract.provisional.ProvisionalGoldManageFragment"
         android:label="fragment_provision_gold_manage"
         tools:layout="@layout/fragment_provision_gold_manage" />
 
